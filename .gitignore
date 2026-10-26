@@ -2,4 +2,7 @@ node_modules/
 .DS_Store
 Thumbs.db
 *.apk
+*.ipa
 Karaoke-Kenz-VIP.apk
+Karaoke-Kenz-VIP.ipa
+ios-ipa-download/

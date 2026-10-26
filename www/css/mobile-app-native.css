@@ -1,38 +1,57 @@
 /**
  * =============================================================================
- * MOBILE APP NATIVE EXPERIENCE ENHANCER - IOS & ANDROID
+ * KARAOKE KENZ - VIP NATIVE MOBILE APP EXPERIENCE SYSTEM (IOS & ANDROID)
  * =============================================================================
- * Cung cấp trải nghiệm 60-120fps, Safe-Area chuẩn, chống giật nảy & vuốt mượt mà
+ * Chuẩn hóa giao diện 100% chuẩn Native App cho mọi dòng iPhone (Tai thỏ,
+ * Dynamic Island, Home Bar) và Android (Samsung, Xiaomi, Oppo tràn viền,
+ * phím Back vật lý, màn hình 120Hz).
  * =============================================================================
  */
 
-/* 1. Reset chạm & cuộn chuẩn Native */
+/* 1. CSS CUSTOM PROPERTIES (SAFE AREA & THEME TOKENS) */
+:root {
+  --sat: env(safe-area-inset-top, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
+  --sal: env(safe-area-inset-left, 0px);
+  --sar: env(safe-area-inset-right, 0px);
+  --tabbar-height: 64px;
+  --kenz-gold-primary: #ffb703;
+  --kenz-gold-bright: #ffd166;
+  --kenz-pink-hot: #ff5d8f;
+  --kenz-dark-bg: #0d0b1c;
+  --kenz-dark-surface: rgba(16, 14, 34, 0.96);
+}
+
+/* 2. RESET GIAO DIỆN & TỐI ƯU CẢM ỨNG 60-120FPS */
 html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior-y: none;
   touch-action: pan-y;
+  scroll-behavior: smooth;
 }
 
 body {
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
-  /* Đảm bảo padding đáy vừa vặn thanh điều hướng mobile */
-  padding-bottom: calc(76px + env(safe-area-inset-bottom, 16px)) !important;
+  /* Đảm bảo đáy trang luôn có khoảng đệm vừa vặn thanh Tab Bar chuẩn app */
+  padding-bottom: calc(var(--tabbar-height) + max(14px, var(--sab))) !important;
 }
 
-/* 2. Triệt tiêu hiện tượng iOS tự ý phóng to khi bấm vào ô nhập liệu */
+/* 3. TRIỆT TIÊU HIỆN TƯỢNG IOS SAFARI PHÓNG TO KHI CHẠM Ô NHẬP LIỆU */
 input, select, textarea {
   font-size: 16px !important;
+  line-height: 1.4 !important;
   touch-action: manipulation;
   -webkit-appearance: none;
   appearance: none;
+  border-radius: 10px;
 }
 
-/* 3. Phản hồi xúc giác (Haptic Touch feedback) khi bấm nút */
-button, a, .btn, .fab-btn, .room-card, .ktv-card, .feat, .amenity-pill {
+/* 4. PHẢN HỒI XÚC GIÁC TỨC THÌ (HAPTIC MICRO-INTERACTION) */
+button, a, .btn, .fab-btn, .room-card, .ktv-card, .feat, .amenity-pill, .tab-item {
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent !important;
   user-select: none;
@@ -41,132 +60,359 @@ button, a, .btn, .fab-btn, .room-card, .ktv-card, .feat, .amenity-pill {
 
 .btn:active,
 .fab-btn:active,
-.quick .fab-btn:active,
 .room-card:active,
-.ktv-card:active {
-  transform: scale(0.96) !important;
+.ktv-card:active,
+.tab-item:active {
+  transform: scale(0.95) !important;
   transition: transform 0.08s cubic-bezier(0.2, 0.8, 0.4, 1) !important;
 }
 
-/* 4. Tối ưu Header dính đỉnh tai thỏ / Dynamic Island */
+/* 5. TOP HEADER DÍNH ĐỈNH (SAFE-AREA TAI THỎ & DYNAMIC ISLAND) */
 header.top {
   position: sticky !important;
   top: 0 !important;
-  padding-top: env(safe-area-inset-top, 0px) !important;
-  background: rgba(16, 14, 34, 0.94) !important;
-  backdrop-filter: blur(16px) !important;
-  -webkit-backdrop-filter: blur(16px) !important;
+  padding-top: max(var(--sat), 8px) !important;
+  background: var(--kenz-dark-surface) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(255, 183, 3, 0.25) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
   z-index: 900 !important;
+  transition: background-color 0.3s ease;
 }
 
-/* 5. Tối ưu thanh đáy điều hướng nhanh (Quick Bottom Bar) */
+/* Trên màn hình điện thoại (<= 768px): Tinh gọn Header thành Thanh Tiêu Đề App chuẩn Native */
 @media (max-width: 768px) {
-  .quick {
-    display: block !important;
-    position: fixed !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    z-index: 990 !important;
-    background: rgba(13, 11, 28, 0.96) !important;
-    backdrop-filter: blur(20px) !important;
-    -webkit-backdrop-filter: blur(20px) !important;
-    border-top: 1px solid rgba(255, 183, 3, 0.4) !important;
-    box-shadow: 0 -10px 35px rgba(0, 0, 0, 0.8) !important;
-    padding: 8px 12px !important;
-    padding-bottom: max(12px, env(safe-area-inset-bottom, 12px)) !important;
-  }
-
-  .quick-main {
+  header.top .wrap {
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
+    padding: 8px 14px !important;
     gap: 8px !important;
-    max-width: 480px !important;
-    margin: 0 auto !important;
   }
 
-  .quick .fab-btn {
-    flex: 1 !important;
-    height: 46px !important;
-    border-radius: 12px !important;
+  /* Ẩn thanh menu ngang cồng kềnh vì đã có thanh Tab Bar chuẩn app dưới đáy */
+  header.top nav.links {
+    display: none !important;
+  }
+
+  header.top .brand {
     display: flex !important;
-    flex-direction: row !important;
     align-items: center !important;
-    justify-content: center !important;
+    gap: 8px !important;
+  }
+
+  header.top .brand img {
+    height: 38px !important;
+    width: auto !important;
+  }
+
+  header.top .brand span {
+    display: none !important;
+  }
+
+  header.top .top-acts {
+    display: flex !important;
+    align-items: center !important;
     gap: 6px !important;
-    font-size: 0.88rem !important;
+    margin-left: auto !important;
+  }
+
+  /* Nút gọi nhanh góc trên */
+  header.top .top-acts .btn-call-mini {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+    background: linear-gradient(135deg, #00b4d8, #0077b6) !important;
+    color: #fff !important;
+    padding: 6px 12px !important;
+    border-radius: 999px !important;
+    font-size: 0.82rem !important;
     font-weight: 700 !important;
     text-decoration: none !important;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4) !important;
-  }
-
-  .quick .fab-btn.hot {
-    flex: 1.3 !important;
-    background: linear-gradient(135deg, #ff5d8f, #ffb547) !important;
-    color: #fff !important;
-    box-shadow: 0 4px 18px rgba(255, 93, 143, 0.45) !important;
-  }
-
-  /* Nút FAB nổi dịch lên trên để không đè vào thanh đáy */
-  .fab {
-    right: 14px !important;
-    bottom: calc(76px + env(safe-area-inset-bottom, 14px)) !important;
-    z-index: 950 !important;
-  }
-
-  .fab-btn {
-    width: 54px !important;
-    height: 54px !important;
-    font-size: 0.76rem !important;
-  }
-
-  /* Nút cài PWA nổi góc trái phía trên thanh đáy */
-  .pwa-install-btn {
-    left: 14px !important;
-    bottom: calc(76px + env(safe-area-inset-bottom, 14px)) !important;
-  }
-
-  /* Toast thông báo đặt phòng */
-  .live-booking-toast {
-    bottom: calc(78px + env(safe-area-inset-bottom, 14px)) !important;
-    left: 14px !important;
-    width: calc(100vw - 28px) !important;
+    box-shadow: 0 2px 8px rgba(0, 180, 216, 0.4) !important;
   }
 }
 
-/* 6. Chuẩn hóa Bottom Sheet vuốt từ đáy (Modal Đặt Bàn / Đánh Giá) */
-@media (max-width: 600px) {
+/* 6. THANH ĐIỀU HƯỚNG TAB BAR NATIVE APP (BOTTOM APP BAR CHUẨN IOS & ADR) */
+#native-app-tabbar {
+  display: block;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9990;
+  background: rgba(13, 11, 28, 0.96);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-top: 1px solid rgba(255, 183, 3, 0.35);
+  box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.85);
+  padding: 6px 8px;
+  padding-bottom: max(8px, var(--sab));
+  transform: translateZ(0);
+}
+
+.native-tabbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 520px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Từng Tab thông thường */
+.tab-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #a0a0b8;
+  font-size: 0.72rem;
+  font-weight: 600;
+  gap: 3px;
+  padding: 4px 2px;
+  border-radius: 10px;
+  transition: all 0.2s cubic-bezier(0.2, 0.8, 0.4, 1);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.tab-item svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+  transition: transform 0.2s ease, fill 0.2s ease;
+}
+
+.tab-item.active {
+  color: var(--kenz-gold-bright) !important;
+}
+
+.tab-item.active svg {
+  fill: var(--kenz-gold-bright) !important;
+  transform: translateY(-2px);
+}
+
+/* TAB TRUNG TÂM NỔI BẬT: NÚT ĐẶT PHÒNG SIÊU VIP (FLOATING HERO ACTION BUTTON) */
+.tab-item.tab-hero {
+  flex: 1.15;
+  position: relative;
+  top: -14px;
+}
+
+.tab-hero-inner {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff5d8f, #ffb703);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(255, 93, 143, 0.65), 0 0 0 3px rgba(13, 11, 28, 0.95);
+  color: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: heroPulse 2.8s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+.tab-hero-inner svg {
+  width: 26px;
+  height: 26px;
+  fill: #fff;
+  margin-bottom: 1px;
+}
+
+.tab-hero-label {
+  font-size: 0.64rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-top: 2px;
+  color: var(--kenz-gold-bright);
+}
+
+@keyframes heroPulse {
+  0%, 100% {
+    box-shadow: 0 4px 20px rgba(255, 93, 143, 0.65), 0 0 0 3px rgba(13, 11, 28, 0.95);
+  }
+  50% {
+    box-shadow: 0 6px 26px rgba(255, 183, 3, 0.85), 0 0 0 4px rgba(255, 183, 3, 0.4);
+  }
+}
+
+/* Ẩn thanh quick cũ khi có thanh native tabbar để tránh trùng lặp */
+.quick {
+  display: none !important;
+}
+
+/* 7. NÚT NỔI ZALO & WECHAT DỌC PHẢI MÀN HÌNH (DÀNH CHO KHÁCH CẦN HỖ TRỢ TRỰC TIẾP) */
+@media (max-width: 768px) {
+  .fab {
+    right: 12px !important;
+    bottom: calc(var(--tabbar-height) + max(16px, var(--sab))) !important;
+    z-index: 950 !important;
+    gap: 10px !important;
+  }
+
+  .fab-btn {
+    width: 48px !important;
+    height: 48px !important;
+    font-size: 0.72rem !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6) !important;
+  }
+
+  /* Popover liên hệ dịch lên trên để không đè vào tabbar */
+  .pop {
+    right: 68px !important;
+    bottom: calc(var(--tabbar-height) + max(16px, var(--sab))) !important;
+    width: min(290px, calc(100vw - 84px)) !important;
+    z-index: 960 !important;
+  }
+
+  /* Toast thông báo đặt phòng trực tiếp */
+  .live-booking-toast {
+    bottom: calc(var(--tabbar-height) + max(16px, var(--sab))) !important;
+    left: 12px !important;
+    width: calc(100vw - 24px) !important;
+    z-index: 940 !important;
+  }
+}
+
+/* 8. MODAL / BOTTOM SHEET CHUẨN IOS & ANDROID (VUỐT TỪ ĐÁY LÊN 60FPS) */
+@media (max-width: 768px) {
   .modal {
-    padding: 0 !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: rgba(0, 0, 0, 0.78) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    display: flex !important;
     align-items: flex-end !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    z-index: 99999 !important;
+  }
+
+  .modal[hidden] {
+    display: none !important;
   }
 
   .sheet {
     width: 100% !important;
     max-width: 100% !important;
-    border-radius: 24px 24px 0 0 !important;
+    border-radius: 28px 28px 0 0 !important;
+    border: 1px solid rgba(255, 183, 3, 0.4) !important;
     border-bottom: none !important;
-    max-height: 88vh !important;
+    background: #141228 !important;
+    max-height: 90vh !important;
     overflow-y: auto !important;
     -webkit-overflow-scrolling: touch !important;
-    padding-bottom: calc(24px + env(safe-area-inset-bottom, 16px)) !important;
-    box-shadow: 0 -15px 40px rgba(0, 0, 0, 0.9) !important;
+    overscroll-behavior-y: contain !important;
+    padding: 16px 20px !important;
+    padding-bottom: calc(20px + max(16px, var(--sab))) !important;
+    box-shadow: 0 -15px 45px rgba(0, 0, 0, 0.95) !important;
+    animation: sheetSlideUp 0.32s cubic-bezier(0.32, 0.72, 0, 1) !important;
+    position: relative !important;
   }
 
-  /* Thanh tay nắm (Handle bar) chuẩn iOS Bottom Sheet */
+  /* Thanh Handle Bar kéo vuốt chuẩn iOS Bottom Sheet */
   .sheet::before {
     content: "" !important;
     display: block !important;
     width: 44px !important;
     height: 5px !important;
     border-radius: 999px !important;
-    background: rgba(255, 255, 255, 0.25) !important;
-    margin: -10px auto 14px auto !important;
+    background: rgba(255, 255, 255, 0.3) !important;
+    margin: -6px auto 14px auto !important;
+    cursor: grab;
+  }
+
+  /* Nút đóng X to bản dễ bấm */
+  .sheet .x {
+    top: 14px !important;
+    right: 14px !important;
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 50% !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1.3rem !important;
   }
 }
 
-/* 7. Khung xem ảnh VIP phóng to (Lightbox) tràn viền */
+@keyframes sheetSlideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0.6;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* 9. THANH THÔNG BÁO MẠNG ONLINE / OFFLINE CHUẨN NATIVE (TOP PILL BANNER) */
+#native-app-offline-bar {
+  position: fixed;
+  top: max(var(--sat), 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-150%);
+  background: rgba(230, 57, 70, 0.94);
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.4, 1);
+  pointer-events: none;
+}
+
+#native-app-offline-bar.show {
+  transform: translateX(-50%) translateY(0);
+}
+
+#native-app-offline-bar.online {
+  background: rgba(42, 157, 143, 0.94);
+}
+
+/* 10. KHUNG XEM ẢNH LIGHTBOX TOÀN MÀN HÌNH CHUẨN SAFE-AREA */
 .lightbox {
-  padding: env(safe-area-inset-top, 16px) env(safe-area-inset-right, 16px) env(safe-area-inset-bottom, 16px) env(safe-area-inset-left, 16px) !important;
+  padding: max(var(--sat), 16px) max(var(--sar), 16px) max(var(--sab), 16px) max(var(--sal), 16px) !important;
+}
+
+/* 11. TỐI ƯU CÁC KHỐI NỘI DUNG TRÊN ĐIỆN THOẠI NHỎ */
+@media (max-width: 480px) {
+  .hero-h1 {
+    font-size: 1.85rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .hero-p {
+    font-size: 0.94rem !important;
+  }
+
+  .pricing-card-wrap {
+    padding: 16px !important;
+  }
+
+  .ktv-grid, .room-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
 }
