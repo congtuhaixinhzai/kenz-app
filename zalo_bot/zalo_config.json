@@ -1,0 +1,17 @@
+{
+  "servicePort": 5000,
+  "receiverPhone": "0342092999",
+  "note": "Số điện thoại Zalo chính của quán nhận thông báo đặt phòng",
+  "subAccount": {
+    "enabled": true,
+    "loginMethod": "cookie",
+    "zpw_sek": "DÁN_MÃ_ZPW_SEK_CỦA_NICK_PHỤ_TẠI_ĐÂY",
+    "cookie": "DÁN_TOÀN_BỘ_COOKIE_ZALO_WEB_TẠI_ĐÂY",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+  },
+  "antiBan": {
+    "minDelaySeconds": 2,
+    "maxDelaySeconds": 5,
+    "maxMessagesPerHour": 60
+  }
+}

@@ -1,0 +1,614 @@
+{
+  "menu_items": [
+    {
+      "title": "ĐIỀU KHOẢN SỬ DỤNG DỊCH VỤ",
+      "url": "https://karaokektvhanoi.vn/dieu-khoan-su-dung-dich-vu"
+    },
+    {
+      "title": "BẢO MẬT THÔNG TIN KHÁCH HÀNG",
+      "url": "https://karaokektvhanoi.vn/bao-mat-thong-tin-khach-hang"
+    },
+    {
+      "title": "Trang Chủ",
+      "url": "https://karaokektvhanoi.vn/"
+    },
+    {
+      "title": "Giới Thiệu",
+      "url": "https://karaokektvhanoi.vn/gioi-thieu"
+    },
+    {
+      "title": "Karaoke Royal 31-33 Nguyễn Khang",
+      "url": "https://karaokektvhanoi.vn/karaoke-royal-31-33-nguyen-khang"
+    },
+    {
+      "title": "Karaoke Paris Club 69 Trần Thái Tông",
+      "url": "https://karaokektvhanoi.vn/karaoke-paris-club-69-tran-thai-tong"
+    },
+    {
+      "title": "Karaoke RAPTOR 116 Bùi Thị Xuân",
+      "url": "https://karaokektvhanoi.vn/karaoke-raptor-116-bui-thi-xuan"
+    },
+    {
+      "title": "Karaoke TITAN KTV 244 Võ Chí Công",
+      "url": "https://karaokektvhanoi.vn/karaoke-titan-ktv-244-vo-chi-cong"
+    },
+    {
+      "title": "Karaoke The Voice 173 Quan Hoa",
+      "url": "https://karaokektvhanoi.vn/karaoke-the-voice-173-quan-hoa"
+    },
+    {
+      "title": "Karaoke KENZ CLUB 202 Trung Kính",
+      "url": "https://karaokektvhanoi.vn/karaoke-kenz-club-202-trung-kinh"
+    },
+    {
+      "title": "Karaoke TIP TOP 85G Nguyễn Khang",
+      "url": "https://karaokektvhanoi.vn/karaoke-tip-top-85g-nguyen-khang"
+    },
+    {
+      "title": "Karaoke 85 Hoàng Gia Cầu Giấy",
+      "url": "https://karaokektvhanoi.vn/karaoke-85-hoang-gia-cau-giay"
+    },
+    {
+      "title": "Karaoke F5 Plus – Số 5 Trần Duy Hưng",
+      "url": "https://karaokektvhanoi.vn/karaoke-f5-plus-so-5-tran-duy-hung"
+    },
+    {
+      "title": "Karaoke V-POP 50 Trung Hoà",
+      "url": "https://karaokektvhanoi.vn/karaoke-v-pop-50-trung-hoa"
+    },
+    {
+      "title": "Karaoke LEVEL 36 Vũ Trọng Khánh",
+      "url": "https://karaokektvhanoi.vn/karaoke-level-36-vu-trong-khanh"
+    },
+    {
+      "title": "Karaoke LET’S SING 89 Tân Triều",
+      "url": "https://karaokektvhanoi.vn/karaoke-lets-sing-89-tan-trieu"
+    },
+    {
+      "title": "Karaoke F5 Plus – 66 Tố Hữu Hà Đông",
+      "url": "https://karaokektvhanoi.vn/karaoke-f5-plus-66-to-huu-ha-dong"
+    },
+    {
+      "title": "Karaoke X-MEN Club 402 Đê La Thành",
+      "url": "https://karaokektvhanoi.vn/karaoke-x-men-club-402-de-la-thanh"
+    },
+    {
+      "title": "Karaoke LONDON – 20 Lê Trọng Tấn",
+      "url": "https://karaokektvhanoi.vn/karaoke-london-20-le-trong-tan"
+    },
+    {
+      "title": "Karaoke SING KTV – 66 Tố Hữu",
+      "url": "https://karaokektvhanoi.vn/karaoke-sing-ktv-66-to-huu"
+    },
+    {
+      "title": "Karaoke GRAND 300 Xã Đàn",
+      "url": "https://karaokektvhanoi.vn/karaoke-grand-300-xa-dan"
+    },
+    {
+      "title": "Karaoke AMIGO 233 Lê Đức Thọ",
+      "url": "https://karaokektvhanoi.vn/karaoke-amigo-233-le-duc-tho"
+    },
+    {
+      "title": "Karaoke S KTV 69 Trần Thái Tông",
+      "url": "https://karaokektvhanoi.vn/karaoke-s-ktv-69-tran-thai-tong"
+    },
+    {
+      "title": "Karaoke V-Party 5 Hồ Đắc Di",
+      "url": "https://karaokektvhanoi.vn/karaoke-v-party-5-ho-dac-di"
+    },
+    {
+      "title": "Karaoke Royal Club 97 Cầu Giấy",
+      "url": "https://karaokektvhanoi.vn/karaoke-royal-club-97-cau-giay"
+    },
+    {
+      "title": "Karaoke Thượng Hải KTV 229 Tây Sơn",
+      "url": "https://karaokektvhanoi.vn/karaoke-thuong-hai-ktv-229-tay-son"
+    },
+    {
+      "title": "Karaoke SING KTV 65 Thái Thịnh",
+      "url": "https://karaokektvhanoi.vn/karaoke-sing-ktv-65-thai-thinh"
+    },
+    {
+      "title": "Karaoke LONDON 28 Thành Thái",
+      "url": "https://karaokektvhanoi.vn/karaoke-london-28-thanh-thai"
+    },
+    {
+      "title": "Karaoke V-MAX 402 Đê La Thành",
+      "url": "https://karaokektvhanoi.vn/karaoke-v-max-402-de-la-thanh"
+    },
+    {
+      "title": "Karaoke A999 &#8211; 51 Nguyễn Hoàng",
+      "url": "https://karaokektvhanoi.vn/karaoke-a999-51-nguyen-hoang"
+    },
+    {
+      "title": "Bar A9 Club &#8211; 37 Nguyễn Hoàng",
+      "url": "https://karaokektvhanoi.vn/bar-volum-club-so-10-ngo-63-le-duc-tho"
+    },
+    {
+      "title": "A Plus CLUB &#8211; 78 Yên Phụ",
+      "url": "https://karaokektvhanoi.vn/a-plus-club-78-yen-phu-dat-ban-ngay"
+    },
+    {
+      "title": "Bar Volume Club Hateco",
+      "url": "https://karaokektvhanoi.vn/bar-volume-club-kdt-hateco-apollo-xuan-phuong"
+    },
+    {
+      "title": "Karaoke Matrix 124 &#8211; 126 Đường 9A",
+      "url": "https://karaokektvhanoi.vn/karaoke-matrix-124-126-duong-9a"
+    },
+    {
+      "title": "Bar EMPIRE CLUB Quận 1",
+      "url": "https://karaokektvhanoi.vn/bar-empire-club-quan-1"
+    },
+    {
+      "title": "Karaoke London &#8211; Phú Lương",
+      "url": "https://karaokektvhanoi.vn/karaoke-london-phu-luong"
+    },
+    {
+      "title": "Karaoke Lucky &#8211; 10 Hoà Mã",
+      "url": "https://karaokektvhanoi.vn/karaoke-lucky-10-hoa-ma"
+    },
+    {
+      "title": "Karaoke MC QEEN &#8211; 29 La Thành",
+      "url": "https://karaokektvhanoi.vn/karaoke-mc-qeen-29-la-thanh"
+    },
+    {
+      "title": "Karaoke T KTV &#8211; Dương Nội",
+      "url": "https://karaokektvhanoi.vn/karaoke-t-ktv-duong-noi"
+    },
+    {
+      "title": "New The Wann Quận 1",
+      "url": "https://karaokektvhanoi.vn/new-the-wann-quan-1-74-76-nam-ky-khoi-nghia"
+    },
+    {
+      "title": "Tin Tức",
+      "url": "https://karaokektvhanoi.vn/tin-tuc"
+    },
+    {
+      "title": "Liên Hệ",
+      "url": "https://karaokektvhanoi.vn/lien-he"
+    }
+  ],
+  "images": [
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2025/07/Logo-500-x-500.png",
+      "alt": "Karaoke Ktv Hà Nội"
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2025/07/Logo-500-x-500.png",
+      "alt": "Karaoke Ktv Hà Nội"
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2025/07/9959299-scaled-1.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2026/10/1791100689003_755368221161736619_g3193644284611577474_4f219778bf65908f23f7f1e794fb2c47.jpg",
+      "alt": "Karaoke Paris Club 69 Trần Thái Tông"
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2026/10/1791100697730_755368221161736619_g3193644284611577474_216b87c4bbcd8bf3abd3ccc2283aca74.jpg",
+      "alt": "Karaoke Royal 31-33 Nguyễn Khang"
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2026/09/1788875444502_755368221161736619_g883744281632962451_e73f40459b2767711edcb83c86aecac2.jpg",
+      "alt": "Karaoke RAPTOR 116 Bùi Thị Xuân"
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2025/07/1787554198774_755368221161736619_g883744281632962451_842b2104ec5fd06735069c9316dbd5bd.jpg",
+      "alt": "Các cơ sở"
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2026/08/the-wann-quan-1-1.jpg",
+      "alt": "New The Wann Quận 1 &#8211; 74-76 Nam Kỳ Khởi Nghĩa"
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2026/07/z8052727859918_fa5c7668b4fe99b092684d1789ac1859.jpg",
+      "alt": "Karaoke London &#8211; Phú Lương"
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2026/07/z8061726014900_6c47ffd570cd6ad902574114acfe592e.jpg",
+      "alt": "Karaoke Paris Club 69 Trần Thái Tông"
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2026/07/z8061726023848_1eb7c589c412913273ccc6fadc68027c.jpg",
+      "alt": "Phòng VIP Karaoke KTV Tai Hà Nội"
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2025/07/z6694113334790_af73e188312b2921961ac0592305496f-768x768-1.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2025/07/z6838579593991_c03a5a681ab4f8f870d7db3859fe7ed1.jpg",
+      "alt": "Karaoke The Voice Quan Hoa"
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2025/07/z6838579835405_81eb773790da45a92223260d6427fd20.jpg",
+      "alt": "Karaoke Kenz Trung Kính"
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2025/07/z6838580060383_572c4bb8034df95d31cd545dc28438d6.jpg",
+      "alt": "Karaoke Tip Top Nguyễn Khang"
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2025/07/z6838580303256_cf46125ed31893cceb8d6e1e0e0b17af.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2025/07/z6838580605452_91cbee139109c01c0f38e5adb515d83d.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2025/07/z6838581113253_ffd894a6793cfebf34997b653b7e4cd1.jpg",
+      "alt": "Karaoke V-POP 50 Trung Hòa"
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2025/07/z6838581394032_d4051245df15ecb293f9756bcdf6e539.jpg",
+      "alt": "Karaoke Level 36 Vũ Trọng Khánh"
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2025/07/z6838581652029_d7b3511cec81c0e83a9e58e266d83a49.jpg",
+      "alt": "Karaoke Let sing 89 Tân Triều"
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2025/07/z6838582035076_cbcf2ef935f78f0b198b77f4981ff423.jpg",
+      "alt": "Karaoke F5 Plus - 66 Tố Hữu - Hà Đông"
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2025/07/z6838582770079_6c421ce61ae04d4e8adca6c0210246e6.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2025/07/z6847658070875_c872fb317914b0eabd3e1792fcfed6aa.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2025/07/z6847658375369_c4265ef14a519338d5c703cecb3a2fe1.jpg",
+      "alt": "Karaoke SING KTV - 66 Tố Hữu"
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2025/08/z6886005407875_1a9496fb9d22329710f5f073275df07e.jpg",
+      "alt": "Karaoke AMIGO 233 Lê Đức Thọ"
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2025/08/z6886012547209_6222305d628d3573aebe66ec7ec6281e.jpg",
+      "alt": "Karaoke GRAND 300 Xã Đàn"
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2025/08/z6895440299210_46c6f024883fcf4961953739370d7f82.jpg",
+      "alt": "Karaoke S KTV 69 Trần Thái Tông"
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2025/10/z7080328084246_af7285898c9c9baa53a79cb4744d56ac.jpg",
+      "alt": "Karaoke V-Party 5 Hồ Đắc Di"
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2025/10/z7082887867627_047d868be6364a438e1ab0a427aa6441.jpg",
+      "alt": "Karaoke Royal Club 97 Cầu Giấy"
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2025/07/z7755036194685_3038cf3d9b2771f949d65ffdb2b13db4.jpg",
+      "alt": "Các cơ sở"
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2026/04/2436542073243828757.jpg",
+      "alt": "Karaoke Royal Club 97 Cầu Giấy || Đặt Phòng Ngay"
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2026/04/25077230790993720191.jpg",
+      "alt": "Karaoke Royal Club 97 Cầu Giấy || Đặt Phòng Ngay"
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2026/04/z7755277198259_52a0b82a321c810bd0f6d1e21fcc3614.jpg",
+      "alt": "Karaoke A999 &#8211; 51 Nguyễn Hoàng"
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2026/07/z8061755801887_351fff0a873115ff32cf292937f70c05.jpg",
+      "alt": "Karaoke V-MAX 402 Đê La Thành"
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2026/05/hinh-anh-ve-empire-club-8-nguyen-van-trang-quan-1-13.webp",
+      "alt": "Bar EMPIRE CLUB Quận 1"
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2026/04/z7762787747072_359c5bb2fe6d10b090b6cca8496435ad-1.jpg",
+      "alt": "Không Gian Siêu Rộng"
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2026/05/500862509_604835912617648_4495289844698181283_n.jpg",
+      "alt": "Đặt Phòng Volume Club – Điểm Đến Giải Trí Đỉnh Cao Cho Giới Trẻ Hà Thành"
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2026/05/1-1751903211.jpg",
+      "alt": "Karaoke Matrix 124 &#8211; 126 Đường 9A"
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2026/05/z4666977661079_295d73fb5c79c06251a656e278a6b47e.jpg",
+      "alt": "đặt bàn tại Volume Club"
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2025/07/9937759-scaled-1-150x150.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2025/07/Logo-500-x-500.png",
+      "alt": ""
+    },
+    {
+      "url": "https://karaokektvhanoi.vn/wp-content/uploads/2025/07/mau-background-karaoke-300x151.jpg",
+      "alt": ""
+    },
+    {
+      "url": "/wp-content/uploads/2025/07/goidienthoai.png",
+      "alt": "Phone"
+    },
+    {
+      "url": "/wp-content/uploads/2025/07/zalo.png",
+      "alt": "Zalo"
+    },
+    {
+      "url": "/wp-content/uploads/2025/07/wechat.png",
+      "alt": "Wechat"
+    },
+    {
+      "url": "/wp-content/uploads/2025/07/kakao.png",
+      "alt": "Kakao"
+    },
+    {
+      "url": "/wp-content/uploads/2025/09/z7051806322223_c8730cb870ae3add1b5672fbd0babfcb.jpg",
+      "alt": "WeChat QR"
+    },
+    {
+      "url": "/wp-content/uploads/2025/07/z6833331932749_e5a4ba2520ecb620ee685ce200e05761.jpg",
+      "alt": "KakaoTalk QR"
+    }
+  ],
+  "venue_cards": [
+    {
+      "title": "Hệ thống Karaoke ktv Hà nội",
+      "image": "",
+      "link": "",
+      "desc": ""
+    },
+    {
+      "title": "Karaoke Paris Club 69 Trần Thái Tông",
+      "image": "https://karaokektvhanoi.vn/wp-content/uploads/2026/10/1791100689003_755368221161736619_g3193644284611577474_4f219778bf65908f23f7f1e794fb2c47.jpg",
+      "link": "https://karaokektvhanoi.vn/karaoke-paris-club-69-tran-thai-tong",
+      "desc": ""
+    },
+    {
+      "title": "Karaoke Royal 31-33 Nguyễn Khang",
+      "image": "https://karaokektvhanoi.vn/wp-content/uploads/2026/10/1791100697730_755368221161736619_g3193644284611577474_216b87c4bbcd8bf3abd3ccc2283aca74.jpg",
+      "link": "https://karaokektvhanoi.vn/karaoke-royal-31-33-nguyen-khang",
+      "desc": ""
+    },
+    {
+      "title": "Karaoke Raptor - 116 Bùi Thị Xuân",
+      "image": "https://karaokektvhanoi.vn/wp-content/uploads/2026/09/1788875444502_755368221161736619_g883744281632962451_e73f40459b2767711edcb83c86aecac2.jpg",
+      "link": "https://karaokektvhanoi.vn/karaoke-raptor-116-bui-thi-xuan",
+      "desc": ""
+    },
+    {
+      "title": "Karaoke T KTV – Dương Nội",
+      "image": "https://karaokektvhanoi.vn/wp-content/uploads/2025/07/1787554198774_755368221161736619_g883744281632962451_842b2104ec5fd06735069c9316dbd5bd.jpg",
+      "link": "https://karaokektvhanoi.vn/karaoke-t-ktv-duong-noi",
+      "desc": ""
+    },
+    {
+      "title": "New The Wann Quận 1",
+      "image": "https://karaokektvhanoi.vn/wp-content/uploads/2026/08/the-wann-quan-1-1.jpg",
+      "link": "https://karaokektvhanoi.vn/new-the-wann-quan-1-74-76-nam-ky-khoi-nghia",
+      "desc": ""
+    },
+    {
+      "title": "Karaoke London – Phú Lương",
+      "image": "https://karaokektvhanoi.vn/wp-content/uploads/2026/07/z8052727859918_fa5c7668b4fe99b092684d1789ac1859.jpg",
+      "link": "https://karaokektvhanoi.vn/karaoke-london-phu-luong",
+      "desc": ""
+    },
+    {
+      "title": "Karaoke Lucky – 10 Hoà Mã",
+      "image": "https://karaokektvhanoi.vn/wp-content/uploads/2026/07/z8061726014900_6c47ffd570cd6ad902574114acfe592e.jpg",
+      "link": "https://karaokektvhanoi.vn/karaoke-lucky-10-hoa-ma",
+      "desc": ""
+    },
+    {
+      "title": "Karaoke MC QEEN – 29 La Thành",
+      "image": "https://karaokektvhanoi.vn/wp-content/uploads/2026/07/z8061726023848_1eb7c589c412913273ccc6fadc68027c.jpg",
+      "link": "https://karaokektvhanoi.vn/karaoke-mc-qeen-29-la-thanh",
+      "desc": ""
+    },
+    {
+      "title": "Karaoke Titan 244 Võ Chí Công",
+      "image": "https://karaokektvhanoi.vn/wp-content/uploads/2025/07/z6694113334790_af73e188312b2921961ac0592305496f-768x768-1.jpg",
+      "link": "/karaoke-titan-ktv-244-vo-chi-cong",
+      "desc": ""
+    },
+    {
+      "title": "Karaoke The Voice Quan Hoa",
+      "image": "https://karaokektvhanoi.vn/wp-content/uploads/2025/07/z6838579593991_c03a5a681ab4f8f870d7db3859fe7ed1.jpg",
+      "link": "/karaoke-the-voice-173-quan-hoa",
+      "desc": ""
+    },
+    {
+      "title": "Karaoke Kenz Club 202 Trung Kính",
+      "image": "https://karaokektvhanoi.vn/wp-content/uploads/2025/07/z6838579835405_81eb773790da45a92223260d6427fd20.jpg",
+      "link": "/karaoke-kenz-club-202-trung-kinh",
+      "desc": ""
+    },
+    {
+      "title": "Karaoke Tip Top 85G Nguyễn Khang",
+      "image": "https://karaokektvhanoi.vn/wp-content/uploads/2025/07/z6838580060383_572c4bb8034df95d31cd545dc28438d6.jpg",
+      "link": "/karaoke-tip-top-85g-nguyen-khang",
+      "desc": ""
+    },
+    {
+      "title": "Karaoke 85 Hoàng Gia - Cầu Giấy",
+      "image": "https://karaokektvhanoi.vn/wp-content/uploads/2025/07/z6838580303256_cf46125ed31893cceb8d6e1e0e0b17af.jpg",
+      "link": "/karaoke-85-hoang-gia-cau-giay",
+      "desc": ""
+    },
+    {
+      "title": "Karaoke F5 Plus - 5 Trần Duy Hưng",
+      "image": "https://karaokektvhanoi.vn/wp-content/uploads/2025/07/z6838580605452_91cbee139109c01c0f38e5adb515d83d.jpg",
+      "link": "/karaoke-f5-plus-so-5-tran-duy-hung",
+      "desc": ""
+    },
+    {
+      "title": "Karaoke V-POP 50 Trung Hòa",
+      "image": "https://karaokektvhanoi.vn/wp-content/uploads/2025/07/z6838581113253_ffd894a6793cfebf34997b653b7e4cd1.jpg",
+      "link": "/karaoke-v-pop-50-trung-hoa",
+      "desc": ""
+    },
+    {
+      "title": "Karaoke Level 36 Vũ Trọng Khánh",
+      "image": "https://karaokektvhanoi.vn/wp-content/uploads/2025/07/z6838581394032_d4051245df15ecb293f9756bcdf6e539.jpg",
+      "link": "/karaoke-level-36-vu-trong-khanh",
+      "desc": ""
+    },
+    {
+      "title": "Karaoke Let's Sing 89 Tân Triều",
+      "image": "https://karaokektvhanoi.vn/wp-content/uploads/2025/07/z6838581652029_d7b3511cec81c0e83a9e58e266d83a49.jpg",
+      "link": "/karaoke-lets-sing-89-tan-trieu",
+      "desc": ""
+    },
+    {
+      "title": "Karaoke F5 Plus - 66 Tố Hữu",
+      "image": "https://karaokektvhanoi.vn/wp-content/uploads/2025/07/z6838582035076_cbcf2ef935f78f0b198b77f4981ff423.jpg",
+      "link": "/karaoke-f5-plus-66-to-huu-ha-dong/",
+      "desc": ""
+    },
+    {
+      "title": "Karaoke X-MEN Club 402 Đê La Thành",
+      "image": "https://karaokektvhanoi.vn/wp-content/uploads/2025/07/z6838582770079_6c421ce61ae04d4e8adca6c0210246e6.jpg",
+      "link": "/karaoke-x-men-club-402-de-la-thanh",
+      "desc": ""
+    },
+    {
+      "title": "Karaoke LONDON 20 Lê Trọng Tấn",
+      "image": "https://karaokektvhanoi.vn/wp-content/uploads/2025/07/z6847658070875_c872fb317914b0eabd3e1792fcfed6aa.jpg",
+      "link": "/karaoke-london-20-le-trong-tan/",
+      "desc": ""
+    },
+    {
+      "title": "Karaoke SING KTV 66 Tố Hữu",
+      "image": "https://karaokektvhanoi.vn/wp-content/uploads/2025/07/z6847658375369_c4265ef14a519338d5c703cecb3a2fe1.jpg",
+      "link": "/karaoke-sing-ktv-66-to-huu",
+      "desc": ""
+    },
+    {
+      "title": "Karaoke AMIGO 233 Lê Đức Thọ",
+      "image": "https://karaokektvhanoi.vn/wp-content/uploads/2025/08/z6886005407875_1a9496fb9d22329710f5f073275df07e.jpg",
+      "link": "/karaoke-amigo-233-le-duc-tho",
+      "desc": ""
+    },
+    {
+      "title": "Karaoke GRAND 300 Xã Đàn",
+      "image": "https://karaokektvhanoi.vn/wp-content/uploads/2025/08/z6886012547209_6222305d628d3573aebe66ec7ec6281e.jpg",
+      "link": "/karaoke-grand-300-xa-dan",
+      "desc": ""
+    },
+    {
+      "title": "Karaoke S 69 Trần Thái Tông",
+      "image": "https://karaokektvhanoi.vn/wp-content/uploads/2025/08/z6895440299210_46c6f024883fcf4961953739370d7f82.jpg",
+      "link": "/karaoke-s-ktv-69-tran-thai-tong",
+      "desc": ""
+    },
+    {
+      "title": "Karaoke V-Party 5 Hồ Đắc Di",
+      "image": "https://karaokektvhanoi.vn/wp-content/uploads/2025/10/z7080328084246_af7285898c9c9baa53a79cb4744d56ac.jpg",
+      "link": "/karaoke-v-party-5-ho-dac-di",
+      "desc": ""
+    },
+    {
+      "title": "Karaoke Royal Club 97 Cầu Giấy",
+      "image": "https://karaokektvhanoi.vn/wp-content/uploads/2025/10/z7082887867627_047d868be6364a438e1ab0a427aa6441.jpg",
+      "link": "/karaoke-royal-club-97-cau-giay",
+      "desc": ""
+    },
+    {
+      "title": "Karaoke Thượng Hải KTV 229 Tây Sơn",
+      "image": "https://karaokektvhanoi.vn/wp-content/uploads/2025/07/z7755036194685_3038cf3d9b2771f949d65ffdb2b13db4.jpg",
+      "link": "https://karaokektvhanoi.vn/karaoke-thuong-hai-ktv-229-tay-son",
+      "desc": ""
+    },
+    {
+      "title": "Karaoke Sing KTV 65 Thái Thịnh",
+      "image": "https://karaokektvhanoi.vn/wp-content/uploads/2026/04/2436542073243828757.jpg",
+      "link": "https://karaokektvhanoi.vn/karaoke-sing-ktv-65-thai-thinh",
+      "desc": ""
+    },
+    {
+      "title": "Karaoke LONDON 28 Thành Thái",
+      "image": "https://karaokektvhanoi.vn/wp-content/uploads/2026/04/25077230790993720191.jpg",
+      "link": "https://karaokektvhanoi.vn/karaoke-london-28-thanh-thai",
+      "desc": ""
+    },
+    {
+      "title": "Karaoke A999 - 51 Nguyễn Hoàng",
+      "image": "https://karaokektvhanoi.vn/wp-content/uploads/2026/04/z7755277198259_52a0b82a321c810bd0f6d1e21fcc3614.jpg",
+      "link": "https://karaokektvhanoi.vn/karaoke-a999-51-nguyen-hoang",
+      "desc": ""
+    },
+    {
+      "title": "Karaoke V-MAX - 402 Đê La Thành",
+      "image": "https://karaokektvhanoi.vn/wp-content/uploads/2026/07/z8061755801887_351fff0a873115ff32cf292937f70c05.jpg",
+      "link": "https://karaokektvhanoi.vn/karaoke-v-max-402-de-la-thanh",
+      "desc": ""
+    },
+    {
+      "title": "A9 Club - 37 Nguyễn Hoàng",
+      "image": "https://karaokektvhanoi.vn/wp-content/uploads/2026/05/hinh-anh-ve-empire-club-8-nguyen-van-trang-quan-1-13.webp",
+      "link": "https://karaokektvhanoi.vn/bar-volum-club-so-10-ngo-63-le-duc-tho",
+      "desc": ""
+    },
+    {
+      "title": "A PLUS CLUB 78 Yên Phụ",
+      "image": "https://karaokektvhanoi.vn/wp-content/uploads/2026/04/z7762787747072_359c5bb2fe6d10b090b6cca8496435ad-1.jpg",
+      "link": "https://karaokektvhanoi.vn/a-plus-club-78-yen-phu-dat-ban-ngay",
+      "desc": ""
+    },
+    {
+      "title": "VOLUME CLUB - KDT HATECO APOLLO Xuân Phương",
+      "image": "https://karaokektvhanoi.vn/wp-content/uploads/2026/05/500862509_604835912617648_4495289844698181283_n.jpg",
+      "link": "https://karaokektvhanoi.vn/bar-volume-club-kdt-hateco-apollo-xuan-phuong",
+      "desc": ""
+    },
+    {
+      "title": "Karaoke Matrix 124 126 Đường 9A",
+      "image": "https://karaokektvhanoi.vn/wp-content/uploads/2026/05/1-1751903211.jpg",
+      "link": "https://karaokektvhanoi.vn/karaoke-matrix-124-126-duong-9a",
+      "desc": ""
+    },
+    {
+      "title": "Bar Empire Club Quận 1",
+      "image": "https://karaokektvhanoi.vn/wp-content/uploads/2026/05/z4666977661079_295d73fb5c79c06251a656e278a6b47e.jpg",
+      "link": "https://karaokektvhanoi.vn/bar-empire-club-quan-1",
+      "desc": ""
+    },
+    {
+      "title": "Hệ thống Karaoke ktv Hà Nội",
+      "image": "https://karaokektvhanoi.vn/wp-content/uploads/2025/07/Logo-500-x-500.png",
+      "link": "tel:+84971000662",
+      "desc": "Hệ thống KTV Hà Nội – chuỗi phòng hát karaoke sang trọng trải khắp thủ đô! Với nhiều cơ sở tại các quận trung tâm, mỗi phòng đều được trang bị dàn âm thanh công suất lớn, micro không dây chống hú và hệ thống đèn LED hiện đại, mang đến không gian đẳng cấp như phòng thu chuyên nghiệp. Thiết kế rộng rãi, tinh tế cùng thực đơn đa dạng, phong phú sẽ khiến bữa tiệc giải trí của bạn thêm hoàn hảo. Đặt phòng ngay hôm nay để tận hưởng trải nghiệm karaoke thượng hạng tại hệ thống Karaoke KTV Hà Nội và “cháy” hết mình bên bạn bè! Hotline: 0971 000 662Zalo: 0971 000 662Website: karaokektvhanoi.vnEmail: Karaokektvhanoi@gmail.com"
+    },
+    {
+      "title": "Karaoke KTV hà nội",
+      "image": "",
+      "link": "tel:+84971000662",
+      "desc": "Hệ thống Karaoke KTV Hà Nội - Nơi trải nghiệm âm nhạc đỉnh cao trong không gian sang trọng, kết nối những tâm hồn yêu nhạc và tạo nên những kỷ niệm đáng nhớ. Hotline: 0971 000 662 Email: Karaokektvhanoi@gmail.comChính sách của chúng tôi."
+    },
+    {
+      "title": "Hệ thống Karaoke KTV VIP",
+      "image": "",
+      "link": "https://karaokektvhanoi.vn/karaoke-royal-31-33-nguyen-khang",
+      "desc": ""
+    },
+    {
+      "title": "Hệ thống Karaoke KTV VIP",
+      "image": "",
+      "link": "https://karaokektvhanoi.vn/karaoke-paris-club-69-tran-thai-tong",
+      "desc": ""
+    }
+  ]
+}

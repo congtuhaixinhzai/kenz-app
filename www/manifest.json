@@ -1,0 +1,63 @@
+{
+  "name": "Karaoke Kenz 202 Trung Kính",
+  "short_name": "Karaoke Kenz",
+  "description": "30 Phòng hát Siêu VIP tại 202 Trung Kính, Cầu Giấy, Hà Nội. Giữ chỗ 24/7 Hotline 0342 092 999.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#100e22",
+  "theme_color": "#100e22",
+  "orientation": "portrait",
+  "lang": "vi",
+  "dir": "ltr",
+  "categories": ["entertainment", "lifestyle"],
+  "icons": [
+    {
+      "src": "assets/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon-maskable-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "assets/icon-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Đặt phòng ngay",
+      "short_name": "Đặt phòng",
+      "description": "Giữ chỗ phòng VIP nhận quà tặng",
+      "url": "./index.html#dat-phong",
+      "icons": [{ "src": "assets/icon-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Hệ thống KTV Hà Nội",
+      "short_name": "KTV Hà Nội",
+      "description": "Xem danh sách các quán KTV uy tín",
+      "url": "./ktv-hanoi.html",
+      "icons": [{ "src": "assets/icon-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Gọi Hotline 24/7",
+      "short_name": "Hotline",
+      "description": "Liên hệ ngay 0342 092 999",
+      "url": "tel:0342092999",
+      "icons": [{ "src": "assets/icon-192x192.png", "sizes": "192x192" }]
+    }
+  ]
+}

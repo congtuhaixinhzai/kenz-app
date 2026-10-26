@@ -1,0 +1,255 @@
+/**
+ * =========================================================================
+ * PWA & MOBILE APP STYLES - KARAOKE KENZ
+ * =========================================================================
+ * - Hỗ trợ Safe-Area-Insets cho iPhone tai thỏ / Dynamic Island
+ * - Nút Cài Đặt App phong cách Neon VIP
+ * - Modal hướng dẫn cài đặt chuẩn iOS & Android
+ * =========================================================================
+ */
+
+/* 1. Hỗ trợ tai thỏ & phím điều hướng vuốt iOS/Android */
+:root {
+  --sat: env(safe-area-inset-top, 0px);
+  --sar: env(safe-area-inset-right, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
+  --sal: env(safe-area-inset-left, 0px);
+}
+
+body {
+  padding-top: var(--sat);
+  padding-bottom: var(--sab);
+  padding-left: var(--sal);
+  padding-right: var(--sar);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+/* 2. Nút Cài đặt App (Floating Install Button) */
+.pwa-install-btn {
+  display: none;
+  position: fixed;
+  bottom: calc(20px + var(--sab));
+  left: 20px;
+  z-index: 998;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: linear-gradient(135deg, #d4af37 0%, #f6e27a 50%, #b8860b 100%);
+  color: #0b0a14;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.4), 0 2px 8px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+
+.pwa-install-btn.visible {
+  display: inline-flex;
+  animation: pwaPulse 3s infinite ease-in-out;
+}
+
+.pwa-install-btn:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 12px 28px rgba(212, 175, 55, 0.6), 0 4px 12px rgba(0, 0, 0, 0.8);
+}
+
+.pwa-install-btn:active {
+  transform: translateY(1px) scale(0.97);
+}
+
+.pwa-icon {
+  stroke: #0b0a14;
+  animation: pwaBounce 2s infinite ease-in-out;
+}
+
+@keyframes pwaPulse {
+  0%, 100% {
+    box-shadow: 0 8px 24px rgba(212, 175, 55, 0.4), 0 0 0 0 rgba(212, 175, 55, 0.5);
+  }
+  50% {
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.6), 0 0 0 8px rgba(212, 175, 55, 0);
+  }
+}
+
+@keyframes pwaBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+/* 3. Modal hướng dẫn cài đặt */
+.pwa-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(5, 4, 12, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pwa-modal-backdrop.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.pwa-modal-box {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  background: #141226;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 40px rgba(212, 175, 55, 0.15);
+  transform: scale(0.92) translateY(20px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  color: #fff;
+}
+
+.pwa-modal-backdrop.active .pwa-modal-box {
+  transform: scale(1) translateY(0);
+}
+
+.pwa-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.pwa-modal-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.pwa-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.pwa-modal-app-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+}
+
+.pwa-modal-title {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+  color: #f6e27a;
+}
+
+.pwa-modal-sub {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0;
+}
+
+.pwa-ios-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.pwa-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.pwa-step-num {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #d4af37, #f6e27a);
+  color: #0b0a14;
+  font-weight: 700;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pwa-step-text {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.pwa-step-text strong {
+  color: #f6e27a;
+}
+
+.pwa-ios-share-icon {
+  display: inline-flex;
+  vertical-align: middle;
+  padding: 2px 4px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  margin: 0 2px;
+}
+
+.pwa-ios-share-icon svg {
+  stroke: #4ea8de;
+}
+
+.pwa-modal-btn-ok {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #d4af37 0%, #f6e27a 100%);
+  color: #0b0a14;
+  font-weight: 700;
+  font-size: 15px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.pwa-modal-btn-ok:hover {
+  opacity: 0.95;
+}
+
+/* 4. Điều chỉnh vị trí trên thiết bị di động nhỏ */
+@media (max-width: 600px) {
+  .pwa-install-btn {
+    left: 14px;
+    bottom: calc(75px + var(--sab)); /* Không đè lên thanh đặt phòng dưới cùng */
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+}

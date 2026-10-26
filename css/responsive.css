@@ -1,0 +1,189 @@
+/* ==========================================================================
+   RESPONSIVE DESIGN - MOBILE, TABLET & DESKTOP - KARAOKE KENZ WEB
+   ========================================================================== */
+
+/* Màn hình lớn & Desktop chuẩn */
+@media (max-width: 1100px) {
+  .revs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablet ngang & Màn hình nhỏ (<= 900px) */
+@media (max-width: 900px) {
+  .hero .wrap {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .hero-photo {
+    aspect-ratio: 4/3;
+    order: -1;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .promo {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .info {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+/* Tablet dọc & Phablet (<= 760px) */
+@media (max-width: 760px) {
+  .top .wrap {
+    flex-wrap: wrap;
+    row-gap: 0;
+  }
+
+  .brand span {
+    display: none;
+  }
+
+  .top-acts {
+    margin-left: auto;
+  }
+
+  nav.links {
+    order: 3;
+    flex: 1 0 100%;
+    margin: 0;
+    justify-content: space-around;
+    gap: 8px;
+    padding: 2px 0 8px;
+    border-top: 1px solid color-mix(in srgb, var(--line) 60%, transparent);
+    font-size: 0.92rem;
+  }
+
+  nav.links a {
+    padding: 8px 2px;
+  }
+
+  section[id] {
+    scroll-margin-top: 120px;
+  }
+}
+
+/* Màn hình điện thoại lớn (<= 700px) */
+@media (max-width: 700px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 140px;
+  }
+}
+
+/* Điện thoại phổ thông (<= 600px) */
+@media (max-width: 600px) {
+  .feats {
+    grid-template-columns: 1fr;
+  }
+
+  .revs {
+    grid-template-columns: 1fr;
+  }
+
+  .brand b {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.08;
+    padding-block: 4px;
+  }
+
+  .brand b i,
+  .brand b u {
+    font-size: 0.56em;
+    letter-spacing: 0.12em;
+  }
+}
+
+/* Tối ưu Floating Action Button và Bottom Sheet Đặt Phòng (<= 560px) */
+@media (max-width: 560px) {
+  .fab {
+    right: 12px;
+    bottom: calc(96px + 4vh + env(safe-area-inset-bottom, 0px));
+    gap: 12px;
+  }
+
+  .fab-btn {
+    width: 66px;
+    height: 66px;
+    font-size: 0.8rem;
+  }
+
+  .fab-btn.wechat {
+    font-size: 0.72rem;
+    letter-spacing: -0.02em;
+  }
+
+  .fab-btn svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .pop {
+    right: 90px;
+    bottom: calc(96px + 4vh + env(safe-area-inset-bottom, 0px));
+    width: min(300px, calc(100vw - 104px));
+  }
+
+  /* Modal chuyển thành Bottom Sheet vuốt từ đáy lên rất tự nhiên */
+  .modal {
+    padding: 0;
+    align-items: end;
+  }
+
+  .sheet {
+    border-radius: 20px 20px 0 0;
+    max-height: 92vh;
+    padding-bottom: calc(28px + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+/* Form 2 cột xuống 1 cột (<= 480px) */
+@media (max-width: 480px) {
+  .two {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Màn hình điện thoại nhỏ (<= 420px) */
+@media (max-width: 420px) {
+  .top .wrap {
+    gap: 10px;
+  }
+
+  .top-acts .btn {
+    padding: 7px 12px;
+    font-size: 0.84rem;
+  }
+
+  .lang-btn {
+    min-width: 0;
+  }
+
+  nav.links {
+    font-size: 0.88rem;
+  }
+
+  .hotline {
+    padding: 14px 18px 14px 12px;
+    gap: 12px;
+  }
+
+  .hotline .hl-row b {
+    font-size: 1.45rem;
+  }
+
+  .hotline .hl-ico {
+    width: 48px;
+    height: 48px;
+  }
+}

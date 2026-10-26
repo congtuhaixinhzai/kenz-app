@@ -1,0 +1,1084 @@
+/* ==========================================================================
+   KTV HÀ NỘI - HỆ THỐNG 36+ QUÁN KARAOKE KTV VIP
+   Thiết kế cao cấp, chuẩn giao diện đêm sang trọng & hiệu ứng ánh sáng VIP
+   ========================================================================== */
+
+/* 1. HIỆU ỨNG MENU KTV HÀ NỘI NỔI BẬT */
+.nav-ktv-highlight {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, rgba(255, 77, 106, 0.15), rgba(255, 180, 0, 0.15));
+  border: 1px solid rgba(255, 180, 0, 0.35);
+  border-radius: 20px;
+  padding: 4px 12px !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em;
+  box-shadow: 0 0 15px rgba(255, 107, 0, 0.25);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.nav-ktv-highlight:hover {
+  background: linear-gradient(135deg, rgba(255, 77, 106, 0.3), rgba(255, 180, 0, 0.3)) !important;
+  border-color: #ffb703 !important;
+  box-shadow: 0 0 22px rgba(255, 183, 3, 0.5) !important;
+  transform: translateY(-1px) scale(1.03);
+}
+
+.badge-hot {
+  display: inline-block;
+  background: linear-gradient(90deg, #ff2a6d, #ff5e36);
+  color: #ffffff;
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 10px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  animation: pulse-hot 1.8s infinite;
+}
+
+@keyframes pulse-hot {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 42, 109, 0.6); }
+  70% { transform: scale(1.06); box-shadow: 0 0 0 6px rgba(255, 42, 109, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 42, 109, 0); }
+}
+
+/* MEGA DROPDOWN MENU KTV HÀ NỘI */
+.nav-item-dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.dropdown-arrow {
+  margin-left: 2px;
+  transition: transform 0.25s ease;
+}
+
+.nav-item-dropdown:hover .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.ktv-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  width: 780px;
+  max-width: 95vw;
+  background: rgba(18, 15, 38, 0.97);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 183, 3, 0.4);
+  border-radius: 18px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 25px rgba(255, 183, 3, 0.25);
+  padding: 20px 24px;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 100;
+  text-align: left;
+}
+
+.nav-item-dropdown:hover .ktv-dropdown-menu,
+.nav-item-dropdown:focus-within .ktv-dropdown-menu {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.ktv-dropdown-menu::before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  left: 0;
+  right: 0;
+  height: 16px;
+}
+
+.ktv-dropdown-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+}
+
+.ktv-dropdown-head .title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #ffd166;
+  text-transform: uppercase;
+}
+
+.ktv-dropdown-head .view-all {
+  color: #ff758c;
+  font-size: 0.86rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.ktv-dropdown-head .view-all:hover {
+  color: #ffd166;
+  text-decoration: underline;
+}
+
+.ktv-dropdown-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.ktv-dropdown-col .col-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #ffb703;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid rgba(255, 183, 3, 0.2);
+  padding-bottom: 4px;
+}
+
+.ktv-dropdown-col a.dropdown-link {
+  display: block;
+  font-size: 0.84rem;
+  color: #c5c2de;
+  text-decoration: none;
+  padding: 5px 6px;
+  border-radius: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 0.15s;
+}
+
+.ktv-dropdown-col a.dropdown-link:hover {
+  background: rgba(255, 183, 3, 0.15);
+  color: #fff;
+  transform: translateX(4px);
+}
+
+.ktv-dropdown-col a.dropdown-link.highlight {
+  color: #ffd166;
+  font-weight: 700;
+}
+
+.ktv-dropdown-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 12px;
+  margin-top: 16px;
+  font-size: 0.82rem;
+  color: #9d99be;
+}
+
+.ktv-dropdown-foot b {
+  color: #ffd166;
+}
+
+@keyframes flash-highlight {
+  0%, 100% { border-color: rgba(255, 183, 3, 0.4); box-shadow: 0 10px 30px rgba(0,0,0,0.35); }
+  50% { border-color: #ffd166; box-shadow: 0 0 35px rgba(255, 209, 102, 0.8); transform: scale(1.03); }
+}
+
+.ktv-card.flash-highlight {
+  animation: flash-highlight 1.5s ease 2;
+}
+
+@media (max-width: 900px) {
+  .ktv-dropdown-menu {
+    display: none;
+  }
+}
+
+/* 2. HERO SECTION KTV HÀ NỘI */
+.ktv-hero {
+  position: relative;
+  padding: 70px 0 40px;
+  text-align: center;
+  background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(138, 43, 226, 0.35), transparent 70%);
+}
+
+.ktv-hero .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 195, 0, 0.3);
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #ffc300;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.ktv-hero h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.18;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #ffffff 0%, #ffd166 45%, #ff758c 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 30px rgba(255, 117, 140, 0.3);
+}
+
+.ktv-hero p.sub {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: #b8b5d0;
+  max-width: 760px;
+  margin: 0 auto 28px;
+  line-height: 1.6;
+}
+
+.ktv-stats {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.ktv-stat-item {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 10px 18px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.92rem;
+  color: #f1f0f8;
+}
+
+.ktv-stat-item b {
+  color: #ffd166;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+/* 3. BỘ LỌC VÀ TÌM KIẾM (FILTER & SEARCH) */
+.ktv-toolbar {
+  position: sticky;
+  top: 64px;
+  z-index: 35;
+  background: rgba(16, 14, 34, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 18px 0;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ktv-toolbar-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ktv-search-box {
+  position: relative;
+  width: 100%;
+}
+
+.ktv-search-box input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  padding: 14px 20px 14px 48px;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.25s;
+}
+
+.ktv-search-box input:focus {
+  border-color: #ffd166;
+  background: rgba(255, 255, 255, 0.09);
+  box-shadow: 0 0 16px rgba(255, 209, 102, 0.25);
+}
+
+.ktv-search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9d99be;
+  pointer-events: none;
+}
+
+.ktv-filters {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scrollbar-width: none;
+}
+
+.ktv-filters::-webkit-scrollbar {
+  display: none;
+}
+
+.ktv-filter-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #c5c2de;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ktv-filter-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.ktv-filter-btn.active {
+  background: linear-gradient(135deg, #ff4d6a, #ffb703);
+  color: #100e22;
+  font-weight: 700;
+  border-color: transparent;
+  box-shadow: 0 4px 14px rgba(255, 77, 106, 0.4);
+}
+
+.ktv-filter-btn .count {
+  background: rgba(0, 0, 0, 0.25);
+  padding: 1px 6px;
+  border-radius: 10px;
+  font-size: 0.78rem;
+}
+
+.ktv-filter-btn.active .count {
+  background: rgba(16, 14, 34, 0.25);
+  color: #100e22;
+  font-weight: 800;
+}
+
+/* 4. LƯỚI QUÁN HÁT (VENUES GRID) */
+.ktv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 26px;
+  margin-bottom: 60px;
+}
+
+.ktv-card {
+  background: rgba(22, 19, 44, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  position: relative;
+  content-visibility: auto;
+  contain-intrinsic-size: 0 450px;
+}
+
+.ktv-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 183, 3, 0.4);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 183, 3, 0.18);
+}
+
+.ktv-card.main-venue {
+  border: 2px solid #ffb703;
+  box-shadow: 0 12px 38px rgba(255, 183, 3, 0.35), 0 0 25px rgba(255, 77, 106, 0.2);
+}
+
+.ktv-card.main-venue:hover {
+  border-color: #ffd166;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.6), 0 0 35px rgba(255, 183, 3, 0.55);
+}
+
+.ktv-card.priority-venue {
+  border: 1.5px solid rgba(255, 42, 109, 0.55);
+  box-shadow: 0 10px 30px rgba(255, 42, 109, 0.22);
+}
+
+.ktv-card.priority-venue:hover {
+  border-color: #ff2a6d;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.6), 0 0 30px rgba(255, 42, 109, 0.45);
+}
+
+.ktv-img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #1b1735;
+}
+
+.ktv-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.ktv-card:hover .ktv-img-wrap img {
+  transform: scale(1.08);
+}
+
+.ktv-card-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(16, 14, 34, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #ffd166;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ktv-card-stars {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(16, 14, 34, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #ffb703;
+}
+
+.ktv-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.ktv-title {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+  line-height: 1.35;
+}
+
+.ktv-addr {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: #b2aed0;
+  font-size: 0.88rem;
+  margin-bottom: 14px;
+  line-height: 1.45;
+}
+
+.ktv-addr svg {
+  flex-shrink: 0;
+  color: #ff5e36;
+  margin-top: 2px;
+}
+
+.ktv-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.ktv-feat-pill {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.76rem;
+  color: #9d99be;
+}
+
+.ktv-card-footer {
+  margin-top: auto;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.ktv-card-footer .btn-book-venue {
+  flex: 1;
+  background: linear-gradient(135deg, #ff4d6a, #ff9f1c);
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  box-shadow: 0 4px 12px rgba(255, 77, 106, 0.3);
+  transition: all 0.2s;
+}
+
+.ktv-card-footer .btn-book-venue:hover {
+  box-shadow: 0 6px 18px rgba(255, 77, 106, 0.5);
+  transform: translateY(-2px);
+}
+
+.ktv-card-footer .btn-call-venue {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.ktv-card-footer .btn-call-venue:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #ffd166;
+}
+
+/* 5. HOMEPAGE BANNER SECTION DÀNH CHO KTV HÀ NỘI TRÊN INDEX */
+.home-ktv-section {
+  padding: 60px 0 40px;
+  background: linear-gradient(180deg, rgba(22, 19, 44, 0.4), rgba(16, 14, 34, 0.95));
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.home-ktv-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.home-ktv-header h2 {
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.home-ktv-header h2 em {
+  font-style: normal;
+  background: linear-gradient(135deg, #ffd166, #ff758c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.btn-view-all-ktv {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 183, 3, 0.4);
+  color: #ffd166;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.25s;
+  box-shadow: 0 0 15px rgba(255, 183, 3, 0.15);
+}
+
+.btn-view-all-ktv:hover {
+  background: #ffb703;
+  color: #100e22;
+  box-shadow: 0 0 25px rgba(255, 183, 3, 0.5);
+  transform: translateX(3px);
+}
+
+/* 6. EMPTY SEARCH RESULT */
+.ktv-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: #9d99be;
+}
+
+.ktv-empty svg {
+  width: 56px;
+  height: 56px;
+  color: #555178;
+  margin-bottom: 14px;
+}
+
+.ktv-empty h3 {
+  font-size: 1.3rem;
+  color: #f1f0f8;
+  margin-bottom: 8px;
+}
+
+/* 7. NÚT XEM CHI TIẾT VÀ BỘ SƯU TẬP ẢNH PHÒNG */
+.btn-detail-venue {
+  background: rgba(255, 183, 3, 0.12);
+  border: 1px solid rgba(255, 183, 3, 0.4);
+  color: #ffd166;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.btn-detail-venue:hover {
+  background: #ffb703;
+  color: #100e22;
+  box-shadow: 0 4px 14px rgba(255, 183, 3, 0.4);
+  transform: translateY(-2px);
+}
+
+.ktv-gallery-item {
+  border-radius: 14px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: #17142e;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.ktv-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  display: block;
+}
+
+.ktv-gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+/* RESPONSIVE FOR DETAIL PAGES & VENUES GRID */
+.venue-detail-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(300px, 1fr) 1.2fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.venue-content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 900px) {
+  .venue-detail-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .venue-content-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ktv-hero { padding: 45px 0 25px; }
+  .ktv-grid { grid-template-columns: 1fr; gap: 20px; }
+  .ktv-card-footer { flex-direction: column; }
+  .ktv-card-footer .btn-call-venue { width: 100%; justify-content: center; }
+  .home-ktv-header { flex-direction: column; align-items: flex-start; }
+  .venue-detail-hero > div { grid-template-columns: 1fr !important; }
+  main > div[style*="grid-template-columns:2fr 1fr"] { grid-template-columns: 1fr !important; }
+
+  /* Ensure floating action widgets do not collide with bottom quick bar */
+  .fab {
+    bottom: calc(78px + env(safe-area-inset-bottom, 12px)) !important;
+  }
+  .pop {
+    bottom: calc(82px + env(safe-area-inset-bottom, 12px)) !important;
+  }
+}
+
+/* ==========================================================================
+   8. PHOTO LIGHTBOX MODAL (XEM ẢNH FULL MÀN HÌNH CỰC ĐẸP)
+   ========================================================================== */
+.ktv-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(8, 6, 20, 0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s;
+}
+
+.ktv-lightbox.active {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.ktv-lightbox-inner {
+  position: relative;
+  max-width: 1000px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: lightboxZoomIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes lightboxZoomIn {
+  from { transform: scale(0.92); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.ktv-lightbox-img {
+  max-width: 100%;
+  max-height: 75vh;
+  border-radius: 16px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 183, 3, 0.25);
+  border: 1px solid rgba(255, 183, 3, 0.4);
+  object-fit: contain;
+}
+
+.ktv-lightbox-caption {
+  margin-top: 14px;
+  color: #ffd166;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+}
+
+.ktv-lightbox-close {
+  position: absolute;
+  top: -46px;
+  right: 0;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.ktv-lightbox-close:hover {
+  background: #ff2a6d;
+  border-color: #ff2a6d;
+  transform: rotate(90deg) scale(1.1);
+}
+
+/* ==========================================================================
+   9. CAM KẾT VÀNG & ĐẶC QUYỀN VIP (VIP GUARANTEES)
+   ========================================================================== */
+.ktv-guarantees-section {
+  padding: 60px 0 30px;
+}
+
+.ktv-guarantees-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.ktv-guarantee-card {
+  background: linear-gradient(145deg, rgba(28, 24, 56, 0.8), rgba(18, 15, 38, 0.9));
+  border: 1px solid rgba(255, 183, 3, 0.22);
+  border-radius: 20px;
+  padding: 26px 22px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.ktv-guarantee-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #ff4d6a, #ffb703, #4cc9f0);
+  opacity: 0.7;
+}
+
+.ktv-guarantee-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 183, 3, 0.5);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 183, 3, 0.2);
+}
+
+.ktv-guarantee-icon {
+  font-size: 2.2rem;
+  margin-bottom: 14px;
+  display: inline-block;
+  filter: drop-shadow(0 4px 10px rgba(255, 183, 3, 0.3));
+}
+
+.ktv-guarantee-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+
+.ktv-guarantee-desc {
+  font-size: 0.9rem;
+  color: #b8b5d0;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   10. FAQ ACCORDION (HỎI ĐÁP CHUẨN GOOGLE FAQ SCHEMA)
+   ========================================================================== */
+.ktv-faq-section {
+  padding: 50px 0;
+}
+
+.ktv-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 860px;
+  margin: 28px auto 0;
+}
+
+.ktv-faq-item {
+  background: rgba(22, 19, 44, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+.ktv-faq-item:hover,
+.ktv-faq-item.active {
+  border-color: rgba(255, 183, 3, 0.35);
+  background: rgba(28, 24, 56, 0.85);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.ktv-faq-q {
+  padding: 18px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.02rem;
+  color: #f1f0f8;
+  user-select: none;
+  transition: color 0.2s;
+}
+
+.ktv-faq-item.active .ktv-faq-q {
+  color: #ffd166;
+}
+
+.ktv-faq-arrow {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  color: #9d99be;
+  transition: transform 0.3s ease, color 0.2s;
+}
+
+.ktv-faq-item.active .ktv-faq-arrow {
+  transform: rotate(180deg);
+  color: #ffd166;
+}
+
+.ktv-faq-a {
+  padding: 0 22px 18px;
+  font-size: 0.94rem;
+  line-height: 1.7;
+  color: #c5c2de;
+  border-top: 1px solid transparent;
+  display: none;
+}
+
+.ktv-faq-item.active .ktv-faq-a {
+  display: block;
+  border-top-color: rgba(255, 255, 255, 0.05);
+}
+
+/* ==========================================================================
+   11. STICKY BOOKING CARD & FLOATING QUICK BAR
+   ========================================================================== */
+.sticky-sidebar-book {
+  position: sticky;
+  top: 90px;
+  z-index: 30;
+}
+
+.pulse-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 42, 109, 0.15);
+  border: 1px solid rgba(255, 42, 109, 0.4);
+  color: #ff758c;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  animation: pulse-hot 2s infinite;
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ff2a6d;
+  box-shadow: 0 0 8px #ff2a6d;
+}
+
+/* ==========================================================================
+   12. MOBILE FLOATING ACTION BAR (.quick & .quick-main) - CHUẨN MOBI ĐẲNG CẤP
+   ========================================================================== */
+.quick {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-bottom: calc(72px + env(safe-area-inset-bottom, 12px)) !important;
+  }
+
+  .quick {
+    display: block !important;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: rgba(16, 14, 34, 0.94);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 183, 3, 0.35);
+    box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.7);
+    padding: 8px 12px;
+    padding-bottom: max(10px, env(safe-area-inset-bottom, 10px));
+  }
+
+  .quick-main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 8px;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .quick .fab-btn {
+    flex: 1;
+    height: 48px;
+    width: auto;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 0.92rem;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    transition: transform 0.15s, background 0.15s;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .quick .fab-btn:active {
+    transform: scale(0.96);
+  }
+
+  .quick .fab-btn svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+
+  .quick .fab-btn[href^="tel:"] {
+    background: linear-gradient(135deg, rgba(255, 77, 106, 0.2), rgba(255, 183, 3, 0.2));
+    border-color: rgba(255, 183, 3, 0.5);
+    color: #ffd166;
+  }
+
+  .quick .fab-btn[href*="zalo"] {
+    background: rgba(10, 104, 255, 0.2);
+    border-color: rgba(10, 104, 255, 0.5);
+    color: #4cc9f0;
+  }
+
+  .quick .fab-btn.hot, .quick button.fab-btn {
+    background: linear-gradient(135deg, #ff2a6d, #ff5e36);
+    color: #fff;
+    border: none;
+    box-shadow: 0 4px 18px rgba(255, 42, 109, 0.5);
+  }
+}

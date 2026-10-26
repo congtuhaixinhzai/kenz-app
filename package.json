@@ -1,0 +1,34 @@
+{
+  "name": "karaoke-kenz-mobile",
+  "version": "1.0.0",
+  "description": "Karaoke Kenz Club 202 Trung Kính - Mobile App for iOS & Android",
+  "main": "index.html",
+  "scripts": {
+    "start": "python server.py",
+    "cap:init": "cap init",
+    "cap:add:android": "cap add android",
+    "cap:add:ios": "cap add ios",
+    "cap:sync": "cap sync",
+    "cap:open:android": "cap open android",
+    "cap:open:ios": "cap open ios",
+    "build:apk": "cd android && gradlew assembleDebug"
+  },
+  "keywords": [
+    "karaoke",
+    "ktv",
+    "ios",
+    "android",
+    "capacitor",
+    "pwa"
+  ],
+  "author": "Karaoke Kenz",
+  "license": "ISC",
+  "devDependencies": {
+    "@capacitor/cli": "^6.1.2"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.1.2",
+    "@capacitor/core": "^6.1.2",
+    "@capacitor/ios": "^6.1.2"
+  }
+}

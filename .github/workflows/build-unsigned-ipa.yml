@@ -1,0 +1,68 @@
+name: Build Unsigned iOS IPA
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "main", "master" ]
+
+jobs:
+  build-ipa:
+    name: Build Unsigned iOS IPA (San Sang Ky Chung Chi)
+    runs-on: macos-14
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Build Web Bundle (www)
+        run: |
+          python3 build_mobile.py
+
+      - name: Install Dependencies
+        run: |
+          npm install
+
+      - name: Sync Capacitor iOS
+        run: |
+          npx cap sync ios
+
+      - name: Compile and Package Unsigned IPA via Xcode
+        run: |
+          cd ios/App
+          
+          # Biên dịch App mà không yêu cầu chứng chỉ (Unsigned)
+          xcodebuild archive \
+            -workspace App.xcworkspace \
+            -scheme App \
+            -configuration Release \
+            -destination 'generic/platform=iOS' \
+            -archivePath build/App.xcarchive \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO
+
+          # Đóng gói cấu trúc Payload chuẩn Apple
+          mkdir -p build/Payload
+          cp -r build/App.xcarchive/Products/Applications/App.app build/Payload/
+          cd build
+          zip -r -y Karaoke-Kenz-VIP.ipa Payload
+          echo "Build IPA hoan tat!"
+          ls -lh Karaoke-Kenz-VIP.ipa
+
+      - name: Upload File IPA Sẵn Sàng Ký
+        uses: actions/upload-artifact@v4
+        with:
+          name: Karaoke-Kenz-VIP-IPA
+          path: ios/App/build/Karaoke-Kenz-VIP.ipa
+          retention-days: 14

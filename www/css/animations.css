@@ -1,0 +1,299 @@
+/* ==========================================================================
+   ANIMATIONS & STAGE LIGHT EFFECTS - KARAOKE KENZ WEB
+   ========================================================================== */
+
+/* Nền đèn vũ trường bar: đốm màu trôi + đèn rọi moving head + tia laser xoay + strobe */
+.bar-lights {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* 4 Đốm sáng đổi màu khổng lồ hòa trộn screen */
+.bar-lights i {
+  position: absolute;
+  width: 55vmax;
+  height: 55vmax;
+  border-radius: 50%;
+  filter: blur(65px);
+  opacity: 0.36;
+  mix-blend-mode: screen;
+  will-change: transform, opacity, background-color;
+}
+
+.bar-lights i:nth-child(1) {
+  left: -18vmax;
+  top: -15vmax;
+  animation: bl-a 7s ease-in-out infinite alternate, bl-flick 2.4s steps(1) infinite, bl-color 6s linear infinite;
+}
+
+.bar-lights i:nth-child(2) {
+  right: -22vmax;
+  top: 10vh;
+  animation: bl-b 8.5s ease-in-out infinite alternate, bl-flick 3.1s steps(1) infinite 0.5s, bl-color 6s linear infinite -1.5s;
+}
+
+.bar-lights i:nth-child(3) {
+  left: 10vw;
+  bottom: -28vmax;
+  animation: bl-c 9.5s ease-in-out infinite alternate, bl-flick 3.7s steps(1) infinite 1s, bl-color 6s linear infinite -3s;
+}
+
+.bar-lights i:nth-child(4) {
+  right: 5vw;
+  bottom: -22vmax;
+  width: 42vmax;
+  height: 42vmax;
+  animation: bl-a 10.5s ease-in-out infinite alternate-reverse, bl-flick 2.9s steps(1) infinite 1.6s, bl-color 6s linear infinite -4.5s;
+}
+
+@keyframes bl-a {
+  to { transform: translate(40vw, 32vh) scale(1.25); }
+}
+
+@keyframes bl-b {
+  to { transform: translate(-45vw, 42vh) scale(0.8); }
+}
+
+@keyframes bl-c {
+  to { transform: translate(35vw, -48vh) scale(1.2); }
+}
+
+@keyframes bl-color {
+  0%   { background-color: #ff2fb3; }
+  20%  { background-color: #7b5cff; }
+  40%  { background-color: #20d5ff; }
+  60%  { background-color: #2fff9b; }
+  80%  { background-color: #ffb547; }
+  100% { background-color: #ff2fb3; }
+}
+
+@keyframes bl-flick {
+  0%   { opacity: 0.36; }
+  10%  { opacity: 0.12; }
+  16%  { opacity: 0.45; }
+  38%  { opacity: 0.30; }
+  44%  { opacity: 0.08; }
+  50%  { opacity: 0.42; }
+  100% { opacity: 0.36; }
+}
+
+/* Đèn rọi sân khấu Moving Head quét hình nón */
+.bar-lights b {
+  position: absolute;
+  top: -10vh;
+  width: 24vmax;
+  height: 130vh;
+  transform-origin: 50% 0;
+  mix-blend-mode: screen;
+  opacity: 0.55;
+  -webkit-mask: linear-gradient(#000, transparent 85%);
+  mask: linear-gradient(#000, transparent 85%);
+  filter: blur(6px);
+}
+
+.bar-lights b:nth-of-type(1) {
+  left: 12%;
+  background: linear-gradient(90deg, transparent, rgba(255, 47, 179, 0.35), transparent);
+  clip-path: polygon(45% 0, 55% 0, 100% 100%, 0 100%);
+  animation: bl-sweep 4.5s ease-in-out infinite alternate;
+}
+
+.bar-lights b:nth-of-type(2) {
+  right: 12%;
+  background: linear-gradient(90deg, transparent, rgba(32, 213, 255, 0.32), transparent);
+  clip-path: polygon(45% 0, 55% 0, 100% 100%, 0 100%);
+  animation: bl-sweep 5.2s ease-in-out infinite alternate-reverse;
+}
+
+.bar-lights b:nth-of-type(3) {
+  left: 45%;
+  background: linear-gradient(90deg, transparent, rgba(255, 181, 71, 0.28), transparent);
+  clip-path: polygon(45% 0, 55% 0, 100% 100%, 0 100%);
+  animation: bl-sweep 6s ease-in-out infinite alternate -2s;
+}
+
+@keyframes bl-sweep {
+  0%   { transform: rotate(-32deg); }
+  100% { transform: rotate(32deg); }
+}
+
+/* Tia laser quay 360 độ từ trần nhà */
+.bar-lights .beams {
+  position: absolute;
+  left: 50%;
+  top: -30vmax;
+  width: 200vmax;
+  height: 200vmax;
+  margin-left: -100vmax;
+  opacity: 0.55;
+  background: repeating-conic-gradient(
+    from 0deg,
+    rgba(255, 47, 179, 0.11) 0deg 1.2deg,
+    transparent 1.2deg 15deg,
+    rgba(32, 213, 255, 0.10) 15deg 16.2deg,
+    transparent 16.2deg 30deg
+  );
+  -webkit-mask: radial-gradient(closest-side, #000 15%, transparent 70%);
+  mask: radial-gradient(closest-side, #000 15%, transparent 70%);
+  animation: bl-spin 12s linear infinite;
+}
+
+@keyframes bl-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Chớp sáng Strobe phong cách bar vũ trường */
+.bar-lights .strobe {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.08), transparent 60%);
+  opacity: 0;
+  animation: bl-strobe 5s infinite;
+}
+
+@keyframes bl-strobe {
+  0%, 88%, 92%, 100% { opacity: 0; }
+  89%, 91%           { opacity: 1; }
+  90%                { opacity: 0.2; }
+}
+
+/* Hiệu ứng kim loại lấp lánh cho chữ Logo */
+@keyframes brand-shine {
+  to { background-position: 100% 0; }
+}
+
+/* Vệt sáng lướt qua nút bấm CTA (cta-shine) */
+@keyframes cta-shine {
+  0%, 55% { left: -70%; }
+  100%    { left: 140%; }
+}
+
+/* Viền phát sáng nhịp tim của nút Hot (cta-glow) */
+@keyframes cta-glow {
+  0%, 100% {
+    box-shadow: 0 8px 28px -10px var(--rose);
+  }
+  50% {
+    box-shadow: 0 10px 34px -8px var(--rose), 0 0 24px 3px rgba(255, 181, 71, 0.55);
+  }
+}
+
+/* Nút tiếng Trung phát sáng nổi bật */
+@keyframes lang-glow {
+  0%, 100% {
+    box-shadow: 0 8px 26px -10px #ff4040;
+  }
+  50% {
+    box-shadow: 0 10px 32px -8px #ff4040, 0 0 22px 3px rgba(255, 181, 71, 0.55);
+  }
+}
+
+/* Rung chuông điện thoại Hotline & Nút gọi */
+@keyframes fab-shake {
+  0%, 70%, 100% { transform: rotate(0); }
+  74%           { transform: rotate(-16deg); }
+  78%           { transform: rotate(14deg); }
+  82%           { transform: rotate(-12deg); }
+  86%           { transform: rotate(10deg); }
+  90%           { transform: rotate(0); }
+}
+
+/* Sóng lan tỏa định kỳ xung quanh nút nổi */
+@keyframes fab-ring {
+  0%        { transform: scale(1); opacity: 0.6; }
+  80%, 100% { transform: scale(1.68); opacity: 0; }
+}
+
+/* Hotline badge glow & ring */
+@keyframes hl-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(255, 181, 71, 0), 0 10px 30px -14px var(--amber);
+  }
+  50% {
+    box-shadow: 0 0 22px 2px rgba(255, 181, 71, 0.45), 0 10px 30px -10px var(--rose);
+  }
+}
+
+@keyframes hl-ring {
+  0%   { box-shadow: 0 0 0 0 rgba(255, 93, 143, 0.6); }
+  100% { box-shadow: 0 0 0 16px rgba(255, 93, 143, 0); }
+}
+
+/* Hiệu ứng nảy khi bấm vào FAB */
+@keyframes fab-pop {
+  0%   { transform: scale(0.82); }
+  60%  { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+@keyframes fab-burst {
+  0%   { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.9); opacity: 0; }
+}
+
+/* Modal & Popover xuất hiện êm ái */
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: translateX(14px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes modal-scale {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Chớp flash khi bấm menu */
+@keyframes nav-flash {
+  0% {
+    text-shadow: 0 0 4px #fff, 0 0 30px #ffb547, 0 0 50px #ff5d8f;
+    color: #fff;
+  }
+  100% {}
+}
+
+/* TỐI ƯU HÓA HIỆU NĂNG SIÊU MƯỢT TRÊN MOBILE & TABLET (60-120 FPS SMOOTH SCROLL) */
+@media (max-width: 768px) {
+  .bar-lights i {
+    filter: blur(35px);
+    opacity: 0.22;
+    animation-duration: 12s;
+    will-change: auto;
+  }
+  .bar-lights .beams {
+    display: none; /* Tắt tia quay 200vmax conic gradient để giải phóng GPU mobile */
+  }
+  .bar-lights b {
+    opacity: 0.3;
+    filter: blur(4px);
+  }
+  .bar-lights .strobe {
+    display: none;
+  }
+}
+
+/* Tối ưu giảm tải khi người dùng bật giảm chuyển động trên hệ điều hành */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *:not(.bar-lights *):not(.fab-btn):not(.fab-btn *):not(.hl-ico):not(.btn-hot):not(.hotline):not(.lang-btn) {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+

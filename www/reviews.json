@@ -1,0 +1,66 @@
+[
+  {
+    "id": "rev_1729900001",
+    "author": "Lê",
+    "phone": "",
+    "rating": 5,
+    "content": "Sinh Nhật hát ở đây rất oki giá hợp lý nv chu đáo không thái độ làm việc chuyên nghiệp",
+    "sub_ratings": {
+      "food": 5,
+      "service": 5,
+      "atmosphere": 5
+    },
+    "reply": "",
+    "status": "approved",
+    "created_at": "2026-10-12T14:20:00.000Z",
+    "created_display": "2 tuần trước"
+  },
+  {
+    "id": "rev_1729900002",
+    "author": "MinhQuân Nguyễn",
+    "phone": "",
+    "rating": 5,
+    "content": "quán sạch sẽ nv phục vụ tốt chuyên nghiệp",
+    "sub_ratings": {
+      "food": 5,
+      "service": 5,
+      "atmosphere": 5
+    },
+    "reply": "Cảm ơn quý khách đã đánh giá 5 sao kenz Club",
+    "status": "approved",
+    "created_at": "2026-10-19T10:15:00.000Z",
+    "created_display": "1 tuần trước"
+  },
+  {
+    "id": "rev_1729900003",
+    "author": "Lan Lê",
+    "phone": "",
+    "rating": 5,
+    "content": "Trải nghiệm rất tốt giá hợp lý",
+    "sub_ratings": {
+      "food": 5,
+      "service": 5,
+      "atmosphere": 5
+    },
+    "reply": "",
+    "status": "approved",
+    "created_at": "2026-10-05T19:30:00.000Z",
+    "created_display": "3 tuần trước"
+  },
+  {
+    "id": "rev_1729900004",
+    "author": "Tuấn linh Lê",
+    "phone": "",
+    "rating": 5,
+    "content": "Nhân viên xinh",
+    "sub_ratings": {
+      "food": 5,
+      "service": 5,
+      "atmosphere": 5
+    },
+    "reply": "",
+    "status": "approved",
+    "created_at": "2026-10-12T21:45:00.000Z",
+    "created_display": "2 tuần trước"
+  }
+]
