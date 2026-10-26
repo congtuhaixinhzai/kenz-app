@@ -158,31 +158,33 @@
 /* Tối ưu Floating Action Button và Bottom Sheet Đặt Phòng (<= 560px) */
 @media (max-width: 560px) {
   .fab {
-    right: 12px;
-    bottom: calc(96px + 4vh + env(safe-area-inset-bottom, 0px));
-    gap: 12px;
+    right: 12px !important;
+    bottom: calc(var(--tabbar-height, 64px) + 22px + env(safe-area-inset-bottom, 0px)) !important;
+    gap: 8px !important;
+    z-index: 950 !important;
   }
 
   .fab-btn {
-    width: 66px;
-    height: 66px;
-    font-size: 0.8rem;
+    width: 48px !important;
+    height: 48px !important;
+    font-size: 0.72rem !important;
   }
 
   .fab-btn.wechat {
-    font-size: 0.72rem;
-    letter-spacing: -0.02em;
+    font-size: 0.68rem !important;
+    letter-spacing: -0.02em !important;
   }
 
   .fab-btn svg {
-    width: 30px;
-    height: 30px;
+    width: 22px !important;
+    height: 22px !important;
   }
 
   .pop {
-    right: 90px;
-    bottom: calc(96px + 4vh + env(safe-area-inset-bottom, 0px));
-    width: min(300px, calc(100vw - 104px));
+    right: 70px !important;
+    bottom: calc(var(--tabbar-height, 64px) + 22px + env(safe-area-inset-bottom, 0px)) !important;
+    width: min(290px, calc(100vw - 84px)) !important;
+    z-index: 960 !important;
   }
 
   /* Modal chuyển thành Bottom Sheet vuốt từ đáy lên rất tự nhiên */

@@ -366,10 +366,21 @@
 
       <div class="top-acts">
         <button class="btn btn-ghost btn-sm lang-btn" type="button" id="lang-btn" lang="zh" data-no-i18n aria-label="切换到中文">中文</button>
-        <button class="btn btn-hot btn-sm" type="button" data-book data-venue="Karaoke Kenz Club 202 Trung Kính">Đặt phòng ngay</button>
+        <a class="btn btn-top-ktv" id="btn-header-ktv" href="index.html" aria-label="Trang chủ Kenz Club">🏠 <span>KENZ CLUB</span></a>
+        <button class="btn btn-hot btn-sm header-book-btn" type="button" data-book data-venue="Karaoke Kenz Club 202 Trung Kính">Đặt phòng ngay</button>
       </div>
     </div>
   </header>
+
+  <!-- THANH DANH MỤC LƯỚT NGANG CHUẨN NATIVE MOBILE (CHỐNG TRÀN 100%) -->
+  <nav class="mobile-cat-strip" id="mobile-category-strip" aria-label="Danh mục nhanh">
+    <a href="ktv-hanoi.html" class="cat-pill hot">🔥 KTV HÀ NỘI (21+ Quán)</a>
+    <a href="index.html#bang-gia" class="cat-pill">👑 Bảng Giá Phòng</a>
+    <a href="index.html#hinh-anh" class="cat-pill">📸 Ảnh Quán</a>
+    <a href="index.html#uu-dai" class="cat-pill">🎁 Ưu Đãi VIP</a>
+    <a href="index.html#danh-gia" class="cat-pill">⭐ Đánh Giá</a>
+    <a href="tin-tuc/tintuc.html" class="cat-pill">📰 Tin Tức</a>
+  </nav>
 
   <!-- MAIN CONTENT -->
   <main>
@@ -1952,6 +1963,46 @@
       </div>
     </div>
   </div>
+
+  <!-- THANH ĐIỀU HƯỚNG TAB BAR NATIVE APP (CHUẨN 5 TAB NATIVE APP) -->
+  <nav id="native-app-tabbar" aria-label="Điều hướng ứng dụng">
+    <div class="native-tabbar-inner">
+      <!-- 1. TRANG CHỦ -->
+      <button type="button" class="tab-item" id="tab-home" aria-label="Trang chủ">
+        <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+        <span>Trang chủ</span>
+      </button>
+
+      <!-- 2. KTV HÀ NỘI VIP (21+ QUÁN CẦU GIẤY & ĐỐNG ĐA) -->
+      <button type="button" class="tab-item active" id="tab-ktv" aria-label="KTV Hà Nội">
+        <div style="position:relative;display:inline-flex;align-items:center;justify-content:center">
+          <svg viewBox="0 0 24 24"><path d="M12 3v9.28a4.39 4.39 0 0 0-1.5-.28C8.01 12 6 14.01 6 16.5S8.01 21 10.5 21c2.31 0 4.2-1.75 4.45-4H15V6h4V3h-7z"/></svg>
+          <span class="tab-hot-badge">HOT</span>
+        </div>
+        <span>KTV Hà Nội</span>
+      </button>
+
+      <!-- 3. ĐẶT BÀN SIÊU VIP (HERO ACTION NỔI BẬT) -->
+      <button type="button" class="tab-item tab-hero" id="tab-book" aria-label="Đặt bàn giữ phòng">
+        <div class="tab-hero-inner">
+          <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"/></svg>
+        </div>
+        <span class="tab-hero-label">ĐẶT PHÒNG</span>
+      </button>
+
+      <!-- 4. ƯU ĐÃI KHUYẾN MÃI -->
+      <button type="button" class="tab-item" id="tab-promo" aria-label="Ưu đãi">
+        <svg viewBox="0 0 24 24"><path d="M20 6h-2.18c.11-.31.18-.65.18-1 0-1.66-1.34-3-3-3-1.05 0-1.96.54-2.5 1.35l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.1-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.83 8.62 12 11 8.76V8h2v.76L15.38 12 17 10.83 14.92 8H20v6z"/></svg>
+        <span>Ưu đãi</span>
+      </button>
+
+      <!-- 5. HOTLINE & ZALO -->
+      <button type="button" class="tab-item" id="tab-contact" aria-label="Hỗ trợ Hotline">
+        <svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+        <span>Hotline</span>
+      </button>
+    </div>
+  </nav>
 
   <!-- TOAST -->
   <div class="toast" id="toast" hidden></div>

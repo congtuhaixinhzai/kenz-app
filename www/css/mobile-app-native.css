@@ -133,20 +133,163 @@ header.top {
     margin-left: auto !important;
   }
 
-  /* Nút gọi nhanh góc trên */
-  header.top .top-acts .btn-call-mini {
+  /* Nút KTV Hà Nội nổi bật ngay trên Top Header điện thoại */
+  .btn-top-ktv {
     display: inline-flex !important;
     align-items: center !important;
-    gap: 5px !important;
-    background: linear-gradient(135deg, #00b4d8, #0077b6) !important;
+    gap: 4px !important;
+    background: linear-gradient(135deg, #ff0055, #ff5d8f, #ffb547) !important;
     color: #fff !important;
-    padding: 6px 12px !important;
+    padding: 5px 10px !important;
     border-radius: 999px !important;
-    font-size: 0.82rem !important;
-    font-weight: 700 !important;
+    font-size: 0.76rem !important;
+    font-weight: 800 !important;
     text-decoration: none !important;
-    box-shadow: 0 2px 8px rgba(0, 180, 216, 0.4) !important;
+    box-shadow: 0 2px 10px rgba(255, 0, 85, 0.5) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.02em !important;
+    white-space: nowrap !important;
   }
+
+  /* Trên mobile ẩn nút 'Đặt phòng ngay' ở header vì đã có nút to phát sáng dưới đáy */
+  header.top .top-acts button[data-book],
+  header.top .top-acts a[data-book] {
+    display: none !important;
+  }
+}
+
+/* THANH DANH MỤC LƯỚT NGANG CHUẨN NATIVE APP (CHIPS DƯỚI HEADER) */
+.mobile-cat-strip {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  scrollbar-width: none !important;
+  padding: 8px 12px !important;
+  background: rgba(16, 14, 34, 0.96) !important;
+  border-bottom: 1px solid rgba(255, 183, 3, 0.25) !important;
+  position: sticky !important;
+  top: 54px !important;
+  z-index: 880 !important;
+  max-width: 100vw !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.mobile-cat-strip::-webkit-scrollbar {
+  display: none !important;
+}
+
+@media (min-width: 769px) {
+  .mobile-cat-strip {
+    display: none !important;
+  }
+}
+
+.cat-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  padding: 5px 12px !important;
+  border-radius: 999px !important;
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  white-space: nowrap !important;
+  text-decoration: none !important;
+  color: #c5c2de !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  transition: all 0.2s ease !important;
+  flex-shrink: 0 !important;
+}
+
+.cat-pill.hot {
+  background: linear-gradient(135deg, rgba(255, 0, 85, 0.35), rgba(255, 183, 3, 0.3)) !important;
+  border-color: rgba(255, 183, 3, 0.75) !important;
+  color: #ffd166 !important;
+  box-shadow: 0 2px 8px rgba(255, 0, 85, 0.35) !important;
+}
+
+.cat-pill:active {
+  transform: scale(0.94) !important;
+}
+
+/* BANNER VIP KTV TRONG KHỐI HERO CHO MOBILE */
+.hero-ktv-vip-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin-bottom: 14px !important;
+  padding: 8px 16px !important;
+  background: linear-gradient(135deg, rgba(255, 0, 85, 0.28) 0%, rgba(255, 183, 3, 0.22) 100%) !important;
+  border: 1.5px solid rgba(255, 183, 3, 0.55) !important;
+  border-radius: 999px !important;
+  text-decoration: none !important;
+  color: #fff !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5), 0 0 12px rgba(255, 0, 85, 0.25) !important;
+  transition: transform 0.2s ease, border-color 0.2s ease !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.hero-ktv-vip-badge:active {
+  transform: scale(0.96) !important;
+}
+
+.hero-ktv-vip-badge .hkvb-fire {
+  font-size: 1.15rem !important;
+  animation: fireFlicker 1.6s infinite alternate !important;
+}
+
+.hero-ktv-vip-badge .hkvb-title {
+  font-size: 0.8rem !important;
+  color: #f1f0f7 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.hero-ktv-vip-badge .hkvb-title b {
+  color: #ffd166 !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.hero-ktv-vip-badge .hkvb-arr {
+  color: #ffb703 !important;
+  font-weight: 900 !important;
+  font-size: 1rem !important;
+  margin-left: 2px !important;
+}
+
+@keyframes fireFlicker {
+  0% { transform: scale(1) rotate(-4deg); }
+  100% { transform: scale(1.18) rotate(4deg); }
+}
+
+@media (min-width: 769px) {
+  .btn-top-ktv {
+    display: none !important;
+  }
+  .hero-ktv-vip-badge {
+    display: none !important;
+  }
+}
+
+/* Badge HOT trên tab KTV đáy màn hình */
+.tab-hot-badge {
+  position: absolute !important;
+  top: -4px !important;
+  right: -8px !important;
+  background: #ff0055 !important;
+  color: #fff !important;
+  font-size: 0.54rem !important;
+  font-weight: 800 !important;
+  padding: 1px 4px !important;
+  border-radius: 999px !important;
+  line-height: 1 !important;
+  box-shadow: 0 0 6px rgba(255, 0, 85, 0.8) !important;
 }
 
 /* 6. THANH ĐIỀU HƯỚNG TAB BAR NATIVE APP (BOTTOM APP BAR CHUẨN IOS & ADR) */
@@ -268,7 +411,7 @@ header.top {
 @media (max-width: 768px) {
   .fab {
     right: 12px !important;
-    bottom: calc(var(--tabbar-height) + max(16px, var(--sab))) !important;
+    bottom: calc(var(--tabbar-height) + 26px + max(12px, var(--sab))) !important;
     z-index: 950 !important;
     gap: 10px !important;
   }
