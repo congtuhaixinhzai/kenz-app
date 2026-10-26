@@ -32,10 +32,16 @@ jobs:
       - name: Install Dependencies
         run: |
           npm install
+          chmod -R +x node_modules/.bin || true
 
       - name: Sync Capacitor iOS
         run: |
           npx cap sync ios
+
+      - name: Install CocoaPods
+        run: |
+          cd ios/App
+          pod install || true
 
       - name: Compile and Package Unsigned IPA via Xcode
         run: |
