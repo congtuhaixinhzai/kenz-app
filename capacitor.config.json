@@ -3,7 +3,6 @@
   "appName": "Karaoke Kenz",
   "webDir": "www",
   "server": {
-    "url": "https://karaokekenz.com",
     "cleartext": true,
     "androidScheme": "https"
   },

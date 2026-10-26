@@ -55,9 +55,11 @@ const SITE_CONFIG = {
     // Cấu hình Zalo Bot tự động kết nối qua máy chủ cổng 80
     zaloBot: {
       enabled: true,               // Bật thông báo qua Zalo song song với Telegram
-      serviceUrl: (typeof window !== "undefined" && window.location.port === "8123") 
-        ? "http://192.168.1.245:80/send-zalo" 
-        : "/send-zalo"             // Chạy cùng cổng 80 với web, chuyển tiếp đến Zalo Bot (3000)
+      serviceUrl: (typeof window !== "undefined" && (window.location.protocol === "capacitor:" || window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"))
+        ? "https://karaokekenz.com/send-zalo"
+        : (typeof window !== "undefined" && window.location.port === "8123")
+          ? "http://192.168.1.245:80/send-zalo"
+          : "/send-zalo"
     }
   },
 

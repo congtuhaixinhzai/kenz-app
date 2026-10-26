@@ -22,7 +22,7 @@
   --kenz-dark-surface: rgba(16, 14, 34, 0.96);
 }
 
-/* 2. RESET GIAO DIỆN & TỐI ƯU CẢM ỨNG 60-120FPS */
+/* 2. RESET GIAO DIỆN & TỐI ƯU CẢM ỨNG 60-120FPS CHỐNG KÉO NGANG TUYỆT ĐỐI */
 html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
@@ -30,14 +30,29 @@ html {
   overscroll-behavior-y: none;
   touch-action: pan-y;
   scroll-behavior: smooth;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  overflow-x: clip !important;
 }
 
 body {
-  overflow-x: hidden;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  overflow-x: clip !important;
+  position: relative !important;
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   /* Đảm bảo đáy trang luôn có khoảng đệm vừa vặn thanh Tab Bar chuẩn app */
   padding-bottom: calc(var(--tabbar-height) + max(14px, var(--sab))) !important;
+}
+
+/* Triệt tiêu 100% hiện tượng tràn chiều ngang do bất kỳ phần tử con nào */
+.wrap, header.top, main, section, footer, .hero, .about, .promo, .info, .pricing-section {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  overflow-x: clip !important;
 }
 
 /* 3. TRIỆT TIÊU HIỆN TƯỢNG IOS SAFARI PHÓNG TO KHI CHẠM Ô NHẬP LIỆU */

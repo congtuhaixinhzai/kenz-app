@@ -218,11 +218,12 @@
       '}',
       '@media (max-width: 600px) {',
       '  #live-booking-toast.live-booking-toast {',
-      '    bottom: 78px !important;',
-      '    left: 12px !important;',
-      '    right: 12px !important;',
-      '    max-width: calc(100vw - 24px) !important;',
+      '    bottom: calc(74px + env(safe-area-inset-bottom, 14px)) !important;',
+      '    left: 10px !important;',
+      '    right: 10px !important;',
+      '    max-width: calc(100vw - 20px) !important;',
       '    width: auto !important;',
+      '    box-sizing: border-box !important;',
       '  }',
       '}'
     ].join('\n');
